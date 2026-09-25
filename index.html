@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Educator Award – Interview Q&A | Principal Chan Hung</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: #f0f2f5;
+            color: #1a1a2e;
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a3a5c 0%, #2d6a9f 100%);
+            color: #fff;
+            padding: 50px 40px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(26, 58, 92, 0.25);
+        }
+
+        .header h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .header .subtitle {
+            font-size: 1.15em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85em;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* TOC */
+        .toc {
+            background: #fff;
+            border-radius: 12px;
+            padding: 30px 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            border-left: 5px solid #2d6a9f;
+        }
+
+        .toc h2 {
+            font-size: 1.2em;
+            color: #1a3a5c;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toc ol {
+            columns: 2;
+            column-gap: 40px;
+            padding-left: 22px;
+        }
+
+        .toc li {
+            margin-bottom: 6px;
+            font-size: 0.93em;
+            break-inside: avoid;
+        }
+
+        .toc a {
+            color: #2d6a9f;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: #1a3a5c;
+            text-decoration: underline;
+        }
+
+        /* Section */
+        .section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .section-title {
+            font-size: 1.35em;
+            color: #1a3a5c;
+            padding-bottom: 14px;
+            border-bottom: 3px solid #e8edf3;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .num {
+            background: #1a3a5c;
+            color: #fff;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75em;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Question Card */
+        .q-card {
+            border: 1px solid #e4e9f0;
+            border-radius: 10px;
+            margin-bottom: 22px;
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .q-card:hover {
+            box-shadow: 0 4px 16px rgba(26, 58, 92, 0.08);
+        }
+
+        .q-header {
+            background: #f7f9fc;
+            padding: 18px 24px;
+            border-bottom: 1px solid #e4e9f0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .q-header:hover {
+            background: #eef3f9;
+        }
+
+        .q-num {
+            background: #2d6a9f;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.78em;
+            font-weight: 700;
+            flex-shrink: 0;
+            letter-spacing: 0.3px;
+        }
+
+        .q-text {
+            font-weight: 600;
+            color: #1a1a2e;
+            font-size: 0.98em;
+            flex: 1;
+        }
+
+        .q-toggle {
+            color: #2d6a9f;
+            font-size: 1.1em;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+
+        .q-body.open {
+            max-height: 3000px;
+            padding: 0;
+        }
+
+        .q-inner {
+            padding: 22px 24px 26px;
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 0.75em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .label.why {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .label.en {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .label.zh {
+            background: #cce5ff;
+            color: #004085;
+        }
+
+        .why-text {
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 18px;
+            padding-left: 12px;
+            border-left: 3px solid #ffc107;
+        }
+
+        .answer-block {
+            margin-bottom: 18px;
+        }
+
+        .answer-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .answer-text {
+            font-size: 0.95em;
+            color: #2c2c3e;
+            text-align: justify;
+        }
+
+        .answer-text.zh {
+            font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', sans-serif;
+            color: #1a1a2e;
+        }
+
+        /* Tips Table */
+        .tips-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .tips-table th {
+            background: #1a3a5c;
+            color: #fff;
+            padding: 12px 18px;
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        .tips-table td {
+            padding: 12px 18px;
+            border-bottom: 1px solid #e8edf3;
+            font-size: 0.93em;
+        }
+
+        .tips-table tr:nth-child(even) td {
+            background: #f9fbfd;
+        }
+
+        .do-text {
+            color: #155724;
+            font-weight: 500;
+        }
+
+        .dont-text {
+            color: #721c24;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #888;
+            font-size: 0.85em;
+        }
+
+        /* Print */
+        @media print {
+            body { background: #fff; padding: 0; }
+            .container { max-width: 100%; }
+            .header { border-radius: 0; box-shadow: none; }
+            .q-body { max-height: none !important; padding: 0 !important; }
+            .q-toggle { display: none; }
+            .q-card { break-inside: avoid; }
+            .section { box-shadow: none; border: 1px solid #ddd; }
+        }
+
+        /* Mobile */
+        @media (max-width: 700px) {
+            body { padding: 10px; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 1.5em; }
+            .section { padding: 22px 18px; }
+            .toc ol { columns: 1; }
+            .q-header { padding: 14px 16px; flex-wrap: wrap; }
+            .q-inner { padding: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Legacy Educator Award 2026</h1>
+        <div class="subtitle">Interview Questions &amp; Suggested Answers</div>
+        <div class="subtitle" style="margin-top:5px; font-size:1em;">Principal Chan Hung &mdash; Principal Chan Free Tutorial World</div>
+        <div class="badge">Global Educator Award (GEA) 2026 &bull; UPSI</div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+        <h2>&#128203; Table of Contents</h2>
+        <ol>
+            <li><a href="#s1">Personal Motivation &amp; Philosophy</a></li>
+            <li><a href="#s2">Program Model &amp; Impact</a></li>
+            <li><a href="#s3">Challenges &amp; Growth</a></li>
+            <li><a href="#s4">Scalability &amp; Financial Sustainability</a></li>
+            <li><a href="#s5">Ethics &amp; Values</a></li>
+            <li><a href="#s6">Vision &amp; Systemic Change</a></li>
+            <li><a href="#s7">Legacy &amp; the Award</a></li>
+            <li><a href="#s8">Personal Reflections</a></li>
+            <li><a href="#s9">Questions for the Judges</a></li>
+            <li><a href="#s10">Final Tips for Q&amp;A</a></li>
+        </ol>
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="section" id="s1">
+        <div class="section-title"><span class="num">1</span> Personal Motivation &amp; Philosophy</div>
+
+        <!-- Q1 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q1</span>
+                <span class="q-text">What motivated you to leave a secure, well-paid principal position to start PCFTW?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To test your conviction and authenticity.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">My decision was driven by a profound sense of moral obligation. For seventeen years, I served in Hong Kong's education system, first as a teacher and eventually as a founding principal. During those years, I witnessed a persistent and troubling pattern: students from low-income families who could not keep up with the curriculum were systematically neglected, left behind, and often discarded. They attended classes but could not follow the lessons. When they fell behind, they were retained. When they misbehaved, they were expelled. The system offered them a seat in the classroom but denied them genuine support to learn and grow. The final catalyst came from the story of a Japanese teacher who spent fourteen years walking the streets at night, accompanying troubled youth. His example gave me the clarity and courage I needed. In 2009, I resigned. I started by going to a sports centre late at night, setting up a table with a banner, and asking troubled youth if they wanted free tutoring. I began with five students. What motivated me was not ambition or recognition. It was the simple, urgent belief that every child deserves the right to learn and grow.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我的決定源於一種深刻的道德責任感。我在香港教育界服務了十七年，從教師做起，最終成為創校校長。那些年裡，我目睹了一個持續而令人不安的現象：來自低收入家庭的學生，因為跟不上課程進度，被系統性地忽視、遺棄，甚至被淘汰。他們坐在教室裡，卻聽不懂課；落後了，就被留級；行為出錯了，就被開除。制度給了他們一個座位，卻沒有給他們真正學習和成長的支援。最終的催化劑來自一位日本教師的故事——他花了十四年時間，每晚在街頭陪伴那些迷途的青年。他的榜樣給了我所需的清晰和勇氣。2009年，我辭職了。我開始在深夜去體育館，擺一張桌子，掛上橫幅，問那些迷途的青年是否想要免費補習。我從五個學生開始。激勵我的不是野心或認可，而是一個簡單而迫切的信念：每個孩子都應該有學習和成長的權利。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q2</span>
+                <span class="q-text">What is the core philosophy behind PCFTW?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand the ideological foundation of your work.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">The core philosophy is "equality of learning rights." This is different from mere equality of access. Formal equality of access—the guarantee that every child can enrol in school and receive twelve years of free education—represents only a surface-level commitment. Genuine equality of learning rights requires more: students must not merely occupy classroom seats but must receive the support necessary for actual intellectual and personal development. We believe that true educational justice means valuing progress over rank, effort over innate ability, and dignity over comparison. This is why we created the "compare only with yourself" scholarship—awarded to any student who improves by even a single point. We also believe that education should be a "third education system" alongside formal schooling and commercial tutoring—a free tutoring system for those who cannot access the first two effectively. And ultimately, we hope to become unnecessary. If Hong Kong's schools genuinely provided appropriate support to all students regardless of family background, the third education system of free tutoring would have no reason to exist.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">核心理念是「學習權利的平等」。這不同於單純的入學機會平等。形式上的入學機會平等——保證每個孩子都能入學並接受十二年免費教育——只是表面層次的承諾。真正的學習權利平等需要更多：學生不僅要佔據教室的座位，還必須獲得實際智力和個人發展所需的支援。我們相信，真正的教育公義意味著重視進步多於排名，重視努力多於天賦，重視尊嚴多於比較。這就是為什麼我們創立了「只與自己比較」的獎學金——任何進步哪怕只有一分的學生都能獲獎。我們也相信，教育應該是與正規學校教育和商業補習並列的「第三個教育系統」——為那些無法有效獲得前兩個系統支援的人提供免費補習。而最終，我們希望變得不再被需要。如果香港的學校真正能為所有學生提供適切的支援，不論家庭背景，那麼免費補習的第三個教育系統就沒有存在的理由了。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q3</span>
+                <span class="q-text">Why one-on-one? Why not group tutoring to serve more students?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To test your pedagogical reasoning and commitment to quality.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">One-on-one tutoring is not the most efficient model on paper. It does not allow us to serve as many students at once as a group class would. But efficiency is not the goal. The goal is genuine, transformative learning for students whom the system has already failed. There are three reasons for this commitment. First, our students arrive with fragile self-esteem and defensive pride. They have been compared unfavourably to others throughout their school lives. In a group setting, they will not ask questions for fear of ridicule. In a one-on-one setting, they can safely acknowledge confusion to a single tutor. Second, genuine differentiated instruction is impossible in larger groups. I learned this the hard way with my first two students. When one progressed faster than the other, the slower student felt he was holding his friend back and withdrew altogether. Third, academic difficulties rarely exist in isolation. Our students face family instability, financial stress, and limited parental support. They will only share these struggles within a relationship of genuine trust, which the one-on-one format, sustained over at least three months, makes possible. For these students—fragile in confidence, distrustful of adults, and carrying years of academic failure—the one-on-one relationship is the only environment in which real learning can take place.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">一對一補習在紙面上不是最有效率的模式。它不能像小組班那樣同時服務那麼多學生。但效率不是目標。目標是為那些已被制度辜負的學生提供真正的、轉化性的學習。這個堅持有三個原因。第一，我們的學生帶著脆弱的自尊和防禦性的驕傲來到我們面前。他們在整個校園生活中都被拿來與他人比較。在小組環境中，他們害怕被嘲笑而不敢提問。在一對一的環境中，他們可以安全地向一位導師承認自己的困惑。第二，在較大的群體中，真正的因材施教是不可能的。我是從第一批兩個學生身上學到這個教訓的。當其中一個進步得比另一個快時，較慢的學生覺得自己拖累了朋友，最終退出了補習。第三，學業困難很少是孤立存在的。我們的學生面對家庭不穩定、經濟壓力和有限的父母支援。他們只會在真正信任的關係中分享這些掙扎，而一對一的模式，持續至少三個月，使這種關係成為可能。對於這些信心脆弱、不信任成年人、背負多年學業失敗的學生來說，一對一的關係是唯一能讓真正學習發生的環境。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q4</span>
+                <span class="q-text">What keeps you going after 15+ years?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To see if your passion is genuine and sustainable.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Every time I receive a letter from a student saying they got into university, or that they finally understand a subject, or that they want to become a tutor themselves—that is what keeps me going. The "Pay It Forward" effect—where 18.6% of our students become volunteer tutors—tells me this work is not just about me. It is a movement that will outlast me. When I see a student who once felt ashamed of receiving help become a volunteer tutor themselves, I know the work is sustainable. It is not dependent on me. It is a culture that has taken root.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">每次我收到學生的信，說他們考上了大學，或者終於明白了一個科目，或者他們自己想成為導師——這就是支撐我繼續前行的動力。「傳遞善意」效應——我們18.6%的學生成為義務導師——告訴我這項工作不僅僅是關於我。這是一場將比我更持久的運動。當我看到一個曾經為接受幫助而感到羞恥的學生成為義務導師時，我知道這項工作是可持續的。它不依賴於我。這是一種已經扎根的文化。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q5</span>
+                <span class="q-text">Who has inspired you most in your life?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your values and sources of motivation.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I have been inspired by many people, but the greatest inspiration has come from two sources. First, my mother. She was a teacher, and I saw how her students—decades after graduating—would return to visit her, to thank her, to share their lives with her. I saw the profound, lasting impact a teacher can have. That is when I first thought, "Perhaps I could be a teacher like that." Second, my wife. She was my partner, my supporter, and my greatest source of strength. When I told her I wanted to resign, she did not try to stop me. She simply took out a piece of paper, drew a line down the middle, and began calculating our income and expenses. She said that as long as basic needs were met, she did not object. She bore the economic and psychological pressures of my decision with grace and courage. She passed away two years ago, and I still miss her every day. She taught me what it means to support someone unconditionally. And finally, I am inspired by our students. Their resilience, their courage, their willingness to try again despite years of failure—they inspire me to keep going. They are the reason I do this work. They are the reason I cannot stop.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我受到許多人的啟發，但最大的啟發來自兩個來源。第一，我的母親。她是一位教師，我看到她的學生——畢業幾十年後——會回來探望她、感謝她、與她分享他們的生活。我看到一位教師可以產生的深遠、持久的影響。那是我第一次想：「也許我可以成為那樣的老師。」第二，我的妻子。她是我的伴侶、我的支持者、我最大的力量來源。當我告訴她我想辭職時，她沒有試圖阻止我。她只是拿出一張紙，畫了一條線，開始計算我們的收入和支出。她說只要基本需求得到滿足，她就不反對。她以優雅和勇氣承受了我決定的經濟和心理壓力。她兩年前去世了，我仍然每天想念她。她教會了我無條件支持一個人的意義。最後，我受到我們的學生的啟發。他們的韌性、他們的勇氣、他們儘管經歷多年失敗仍願意再嘗試——他們激勵我繼續前行。他們是我做這項工作的原因。他們是我不能停下來的原因。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="section" id="s2">
+        <div class="section-title"><span class="num">2</span> Program Model &amp; Impact</div>
+
+        <!-- Q6 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q6</span>
+                <span class="q-text">How is PCFTW different from other tutoring charities?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To test your model's distinctiveness and scalability.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Three things make us different. First, we are truly free—no fees, no means-testing, no stigma. Second, we are one-on-one, not group tutoring, which allows us to address each student's specific needs. Third, we don't just teach academics—we mentor, we build confidence, and we measure outcomes. 62.1% of our students report academic gains, 51.7% report confidence transformation, and 47.1% overcome economic barriers. We are not just a tutoring service; we are a parallel support system.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">有三件事使我們與眾不同。第一，我們是真正免費的——沒有費用、沒有入息審查、沒有標籤。第二，我們是一對一，不是小組補習，這使我們能夠針對每個學生的具體需求。第三，我們不僅教授學術——我們提供指導、建立自信，並衡量成果。我們62.1%的學生報告學術進步，51.7%報告自信轉變，47.1%克服經濟障礙。我們不僅僅是一個補習服務；我們是一個平行的支援系統。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q7</span>
+                <span class="q-text">How do you measure the impact of your work?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To verify the credibility of your evidence.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">We measure impact through multiple dimensions. First, academic improvement: an analysis of 656 student testimonials from 2024-2026 shows that 62.1% of students voluntarily reported academic gains. English scores have risen from 33 to 62 marks; mathematics from 21/100 to 59/100; DSE levels from failing to passing. Many students explicitly credit PCFTW with enabling their admission to university programmes including medicine, engineering, and business. Second, emotional and confidence transformation: 51.7% of students reported significant emotional and confidence transformation. They move from believing "I never thought I could" to "I now believe I can." Third, overcoming economic barriers: 47.1% of students explicitly mentioned financial hardship or an inability to pay for tutoring. They describe PCFTW as their "only hope" or "bridge to a better future." Fourth, the "pay it forward" effect: 18.6% of scholarship recipients explicitly committed to becoming volunteer tutors themselves, creating a self-replicating community of givers. This is the strongest evidence of deep, lasting change. Finally, external validation: our work has been recognized in peer-reviewed academic research published in the European Journal of Education, confirming that fee-free one-on-one tutoring enhances the well-being of disadvantaged adolescents.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我們從多個維度衡量影響。第一，學術進步：對2024至2026年656份學生心聲的分析顯示，62.1%的學生自願報告了學術進步。英文分數從33分升至62分；數學從21/100升至59/100；DSE等級從不合格升至合格。許多學生明確表示，PCFTW幫助他們入讀大學課程，包括醫學、工程和商業。第二，情感和自信轉變：51.7%的學生報告了顯著的情感和自信轉變。他們從相信「我從未想過我能做到」轉變為「我現在相信我能做到」。第三，克服經濟障礙：47.1%的學生明確提到經濟困難或無力支付補習費用。他們將PCFTW描述為「唯一的希望」或「通往更美好未來的橋樑」。第四，「傳遞善意」效應：18.6%的獎學金獲得者明確承諾成為義務導師，創造了一個自我複製的給予者社群。這是深刻、持久改變的最強證據。最後，外部驗證：我們的工作已在《歐洲教育研究期刊》的同行評審學術研究中獲得認可，確認免費一對一補習能提升弱勢青少年的福祉。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q8</span>
+                <span class="q-text">How do you recruit and retain over 20,000 volunteer tutors?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess your volunteer management and retention strategies.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Recruitment is both easy and difficult. It is easy because there are many kind-hearted people in Hong Kong who want to help. It is difficult because we are asking for a sustained commitment—at least three months, one hour per week, at a fixed time and place. This is very different from one-off volunteering. We recruit through multiple channels: university partnerships, corporate partnerships, media coverage, social media, and word of mouth. Many of our tutors are former students who received help and now want to give back. Retention is built on three pillars. First, we provide training and support: orientation sessions, monthly workshops, teaching resources, and a peer community. Second, we emphasize reciprocity: tutoring benefits the tutor as much as the student. Many tutors report that the experience provides meaningful connection, perspective on social inequality, and personal satisfaction. Third, we create a sense of belonging: regular gatherings, a Facebook group, and recognition events. The result is that many tutors continue for years, not just the minimum three months. Some have served for over a decade.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">招募既容易又困難。容易是因為香港有很多有心人願意幫忙。困難是因為我們要求的是持續的承諾——至少三個月，每週一小時，在固定的時間和地點。這與一次性的義工服務非常不同。我們通過多種渠道招募：大學合作、企業合作、媒體報導、社交媒體和口碑。我們許多導師是曾經受助的學生，現在想回饋社會。留住導師建立在三個支柱上。第一，我們提供培訓和支援：迎新會、每月工作坊、教學資源和同行社群。第二，我們強調互惠：補習對導師的益處不亞於對學生。許多導師表示，這段經歷提供了有意義的連結、對社會不平等的洞察和個人滿足感。第三，我們創造歸屬感：定期聚會、Facebook群組和表彰活動。結果是許多導師持續服務多年，不僅僅是最低的三個月。有些已服務超過十年。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q9</span>
+                <span class="q-text">How do you ensure quality when your tutors are not professional teachers?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess governance and quality assurance.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">We do not require our tutors to be professional teachers. In fact, professional teachers constitute less than three percent of our tutor corps. This is deliberate. Hong Kong teachers already face overwhelming workloads. Their primary responsibility should be to their own students. Instead, we welcome any individual with a secondary school education who possesses patience, empathy, and commitment to educational equity. Quality is ensured through our support infrastructure. First, all tutors attend an orientation session where we explain our philosophy, the one-on-one model, and the principles of "compare only with yourself." Second, we offer monthly training workshops on topics such as teaching strategies, classroom management, and understanding learner diversity. Third, we provide teaching resources, curriculum materials, and an online platform where tutors can share experiences and seek advice. Fourth, regional coordinators facilitate initial tutor-student matching and provide ongoing monitoring and troubleshooting. Fifth, our survey results show that 100% of students affirm that their tutor is helpful and that they would recommend the service to others. This is the strongest evidence of quality. The tutors' greatest asset is not professional qualification but patience, empathy, and genuine care.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我們不要求導師是專業教師。事實上，專業教師在我們的導師團隊中佔不到百分之三。這是刻意的。香港的教師已經面對沉重的工作量。他們的主要責任應該是照顧好自己的學生。相反，我們歡迎任何具有中學教育程度、具備耐心、同理心和對教育平等承諾的人。質素通過我們的支援架構來保證。第一，所有導師都參加迎新會，我們在會上解釋我們的理念、一對一模式和「只與自己比較」的原則。第二，我們每月舉辦培訓工作坊，主題包括教學策略、課堂管理和理解學習多樣性。第三，我們提供教學資源、課程材料和網上平台，讓導師分享經驗和尋求建議。第四，地區統籌員協助最初的師生配對，並提供持續的監察和支援。第五，我們的調查結果顯示，100%的學生確認他們的導師有幫助，並會向他人推薦這項服務。這是質素的最強證據。導師最大的資產不是專業資格，而是耐心、同理心和真誠的關懷。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q10</span>
+                <span class="q-text">What is the "Pay It Forward" effect, and why does it matter?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess the sustainability and legacy of your work.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">18.6% of our scholarship recipients—113 students—have committed to becoming volunteer tutors themselves. This is the most powerful evidence of legacy. One student said, "I have become a tutor myself—passing on what I received." Another said, "It is more blessed to give than to receive." This creates a self-sustaining cycle: students become mentors, and the community grows stronger. This is how we build a legacy that lasts beyond any single individual.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">18.6%的獎學金獲得者——113名學生——承諾自己成為義務導師。這是遺產最有力的證據。一位學生說：「我自己也成為了導師——把我收到的傳遞下去。」另一位說：「施比受更為有福。」這創造了一個自我延續的循環：學生成為導師，社群變得更強大。這就是我們如何建立超越任何個人的遺產。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="section" id="s3">
+        <div class="section-title"><span class="num">3</span> Challenges &amp; Growth</div>
+
+        <!-- Q11 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q11</span>
+                <span class="q-text">What have been the biggest challenges, and how have you overcome them?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess resilience and problem-solving.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">The biggest challenges have been funding, tutor recruitment, and the scale of need. First, funding: PCFTW receives no government funding. Our operating expenses come entirely from individual donations, foundation grants, and fundraising activities. In the early years, I sent proposal after proposal to foundations with no response. I remember one donor who promised a large sum but attached conditions that would have compromised the purity of our service. I refused. We started again from scratch. Second, tutor recruitment: while we have over 20,000 tutors, we still have over 2,000 students on our waiting list. The demand always exceeds the supply. We address this through continuous recruitment efforts, university partnerships, and media coverage. Third, the scale of need: every day, more students register. We cannot serve them all. But as I have learned from the story of the person picking up starfish on the beach, "it makes a difference to that one." We do what we can, one student at a time. The greatest challenge, however, is not logistical. It is the knowledge that our work is treating symptoms, not the root cause. The real solution lies in systemic reform of mainstream education. Until that happens, we continue to do what we can.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">最大的挑戰是資金、導師招募和需求的規模。第一，資金：PCFTW不接受政府資助。我們的營運開支完全來自個人捐款、基金會撥款和籌款活動。早年，我向基金會寄出一份又一份計劃書，卻沒有回音。我記得有一位捐款人承諾一筆大額捐款，但附加條件會損害我們服務的純粹性。我拒絕了。我們從零開始。第二，導師招募：雖然我們有超過20,000名導師，但仍有超過2,000名學生在輪候名單上。需求總是超過供應。我們通過持續的招募工作、大學合作和媒體報導來應對。第三，需求的規模：每天都有更多學生註冊。我們無法服務所有人。但正如我從沙灘上拾海星的人的故事中學到的，「對那一個來說，是有分別的。」我們盡力而為，一次一個學生。然而，最大的挑戰不是後勤上的。而是知道我們的工作是在治標，不是治本。真正的解決方案在於主流教育的系統性改革。在那之前，我們繼續盡力而為。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q12 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q12</span>
+                <span class="q-text">What has been your greatest challenge or regret?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess humility and self-awareness.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">My greatest challenge has been accepting my limitations. I have had to learn that I cannot save every student. Some students—despite our best efforts—do not return. Some have family situations too complex to overcome. I remember one student, a hidden youth who had not attended school for two years. I tutored him, befriended him, and after months of patience, he agreed to try returning to school. On the morning he was to leave, he walked to the door, put his hand on the handle, and then stopped. He turned back. He could not do it. I never saw him again. That failure haunts me. I carry the guilt of not being able to help him. But it also taught me something important: we must not judge our success by the number of students we save. We must judge it by the quality of our presence, the sincerity of our effort, and the love we offer. We do what we can. We pick up the starfish we can reach. And we accept that some, despite our best efforts, will slip away. That is the burden and the privilege of this work.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我最大的挑戰是接受自己的局限。我必須學會，我無法拯救每一個學生。有些學生——儘管我們盡了最大努力——沒有回來。有些學生的家庭情況太複雜，無法克服。我記得一個學生，一個兩年沒有上學的隱蔽青年。我輔導他，與他交朋友，經過數月的耐心，他同意嘗試重返學校。在他要出發的那天早上，他走到門口，把手放在門把上，然後停了下來。他轉過身。他做不到。我再也沒有見過他。那次失敗一直困擾著我。我背負著無法幫助他的愧疚。但這也教會了我一件重要的事：我們不能用拯救了多少學生來判斷我們的成功。我們必須用我們存在的質量、我們努力的誠意和我們提供的愛來判斷。我們盡力而為。我們拾起我們能觸及的海星。我們接受，有些儘管我們盡了最大努力，還是會溜走。這是這項工作的負擔，也是特權。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q13 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q13</span>
+                <span class="q-text">What have you learned from failure?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess humility and growth mindset.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I have learned that you cannot do everything alone. In the early days, I tried to. But the moment I trusted volunteers, partners, and the community, PCFTW grew. I have also learned that you cannot reach every child—but you must never stop trying. And I have learned that failure is not the end; it is feedback. Every setback has made our model stronger. The student I could not help—the one who could not walk through the door—still haunts me. But that failure taught me to accept my limitations and to focus on the students I can reach. It taught me humility.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我學到你不能獨自完成一切。早年，我嘗試過。但當我信任義工、合作夥伴和社區時，PCFTW就成長了。我也學到你不能觸及每個孩子——但你絕不能停止嘗試。我還學到失敗不是終點；它是反饋。每一次挫折都使我們的模式更強大。我無法幫助的那個學生——那個無法走出門口的學生——仍然困擾著我。但那次失敗教會我接受自己的局限，並專注於我能觸及的學生。它教會了我謙遜。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q14 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q14</span>
+                <span class="q-text">How do you handle criticism or scepticism about your model?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To see how you respond to challenge.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I welcome it. Scepticism keeps us accountable. When people ask, "Can volunteer tutoring really work?" I point to the data: 62.1% academic improvement, 100% student satisfaction, peer-reviewed research. When they ask, "Is it sustainable?" I point to the 18.6% who become tutors. We don't claim to have all the answers. But we do have evidence—and we are always learning. Criticism has made our model stronger. Every challenge has forced us to examine our assumptions and improve our practice.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我歡迎它。懷疑讓我們保持問責。當人們問：「義務補習真的有效嗎？」我指向數據：62.1%的學術進步，100%的學生滿意度，同行評審研究。當他們問：「這可持續嗎？」我指向18.6%成為導師的人。我們不聲稱擁有所有答案。但我們確實有證據——而且我們一直在學習。批評使我們的模式更強大。每一次挑戰都迫使我們審視自己的假設並改進我們的做法。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="section" id="s4">
+        <div class="section-title"><span class="num">4</span> Scalability &amp; Financial Sustainability</div>
+
+        <!-- Q15 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q15</span>
+                <span class="q-text">Can PCFTW's model be replicated in other countries, including Malaysia?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess the broader relevance and scalability of your model.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Absolutely. The model is designed to be replicable. It requires three things: a committed coordinator, volunteer tutors, and a space—even a McDonald's can work, as we have proven. The key is not infrastructure; it is the philosophy: dignity, one-on-one attention, and the belief that every child can learn. I would be honoured to share our framework with educators in Malaysia and beyond. The model has already been adapted in different contexts within Hong Kong, and the principles are universal. Wherever there are disadvantaged students and willing volunteers, this model can work.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">絕對可以。這個模式是為可複製性而設計的。它需要三樣東西：一位有承諾的統籌者、義務導師和一個空間——甚至麥當勞也可以，我們已經證明了。關鍵不是基礎設施，而是哲學：尊嚴、一對一的關注，以及相信每個孩子都能學習。我很榮幸能與馬來西亞及其他地方的教育工作者分享我們的框架。這個模式已在香港的不同環境中進行調整，而原則是普世的。哪裡有弱勢學生和願意的義工，這個模式就能運作。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q16 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q16</span>
+                <span class="q-text">How do you fund PCFTW, and is the model financially sustainable?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To test financial viability and governance.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">We are funded through donations from individuals, corporate partners, and foundations, including the Hong Kong Jockey Club Charities Trust. We have refused donations with conditions that would compromise our mission. Our model is sustainable because it relies on volunteers—over 20,000 to date—and because our overheads are low. But more importantly, our impact is measurable, which builds donor trust. We are not just asking for money; we are showing results. Financial sustainability also comes from diversification—individual donations, foundation grants, corporate partnerships, and fundraising activities. We do not rely on any single source.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我們通過個人捐款、企業合作夥伴和基金會（包括香港賽馬會慈善信託基金）獲得資金。我們拒絕附帶條件會損害我們使命的捐款。我們的模式是可持續的，因為它依賴義工——迄今超過20,000名——而且我們的間接費用低。但更重要的是，我們的影響是可衡量的，這建立了捐款者的信任。我們不僅僅是在要求金錢；我們在展示成果。財務可持續性也來自多元化——個人捐款、基金會撥款、企業合作和籌款活動。我們不依賴任何單一來源。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q17 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q17</span>
+                <span class="q-text">How do you ensure the sustainability of PCFTW beyond your leadership?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess succession planning and institutional sustainability.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Sustainability is a critical concern. I am the founder, but PCFTW is not about me. It is about a community of volunteers, donors, staff, and students who share a common vision. To ensure sustainability, we have built several pillars. First, we have a strong team of dedicated staff who manage day-to-day operations. Second, we have a robust volunteer network—over 20,000 tutors who are the heart of our work. Third, we have diversified funding sources—individual donors, foundation grants, corporate partnerships, and fundraising activities. Fourth, we have documented our model extensively—through the book "Ten Years of Patching the Sky," the Education Model document, and peer-reviewed research. This documentation ensures that our approach can be replicated and adapted by others. Fifth, we have cultivated a culture of "pay it forward"—18.6% of our scholarship recipients become volunteer tutors themselves. This creates a self-sustaining cycle. And ultimately, I believe that if the mission is right, the people will come. There will always be kind-hearted people in Hong Kong who want to help disadvantaged students. Our task is to provide the platform that makes their kindness effective.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">可持續性是關鍵的關注。我是創辦人，但PCFTW不是關於我。它是關於一個志願者、捐款者、員工和學生組成的社群，他們分享共同的願景。為確保可持續性，我們建立了幾個支柱。第一，我們有一支強大的專職團隊管理日常運作。第二，我們有強大的義工網絡——超過20,000名導師是我們工作的核心。第三，我們有多元化的資金來源——個人捐款者、基金會撥款、企業合作和籌款活動。第四，我們廣泛記錄了我們的模式——通過《十年補天》一書、教育模式文件和同行評審研究。這些記錄確保我們的方法可以被他人複製和調整。第五，我們培育了「傳遞善意」的文化——18.6%的獎學金獲得者自己成為義務導師。這創造了一個自我延續的循環。而最終，我相信如果使命是正確的，人們就會來。香港永遠會有有心人想幫助弱勢學生。我們的任務是提供平台，讓他們的善意變得有效。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q18 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q18</span>
+                <span class="q-text">What would you do if you had unlimited resources?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your vision and priorities.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I would expand the "third education system" to every district in Hong Kong and partner with organisations across Asia. I would invest in more AI-supported learning through our LearningX Centre, train more tutors, and provide even more holistic support—psychological counselling, parent programmes, and career mentorship. But ultimately, my dream is that one day, PCFTW will not be needed—because the mainstream system will provide for every child, regardless of background. That is the legacy I want to leave. Unlimited resources would not change our mission; it would only accelerate our progress toward making ourselves unnecessary.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我會將「第三個教育系統」擴展到香港每個地區，並與亞洲各地的組織合作。我會通過我們的LearningX中心投資更多人工智能支援的學習，培訓更多導師，並提供更全面的支援——心理輔導、家長計劃和職業指導。但最終，我的夢想是有一天PCFTW不再被需要——因為主流制度將為每個孩子提供支援，不論背景。這就是我想留下的遺產。無限的資源不會改變我們的使命；它只會加速我們邁向讓自己不再被需要的進程。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="section" id="s5">
+        <div class="section-title"><span class="num">5</span> Ethics &amp; Values</div>
+
+        <!-- Q19 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q19</span>
+                <span class="q-text">How do you maintain ethical standards in your organization?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess integrity and governance.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Ethical standards are non-negotiable. We maintain them in several ways. First, financial transparency: we publish detailed financial statements and are accountable to our donors. Second, we refuse donations with conditions that would compromise our mission. I once refused a large donation from a wealthy businessman because the attached conditions would have affected the purity of our service. Third, we treat our students and families with dignity and respect. We do not publish identifying information about scholarship recipients. We emphasize that receiving government assistance is a right, not something to be ashamed of. Fourth, we never give up on a student. Regardless of their past performance or behaviour, we welcome them. As I have written, "We never refuse, and we never give up." Fifth, we are transparent about our limitations. We acknowledge that our work treats symptoms, not the root cause. We do not claim to have all the answers. We simply do what we can, with integrity and humility.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">道德標準是不可妥協的。我們通過幾種方式維持它們。第一，財務透明：我們公布詳細的財務報表，對捐款者負責。第二，我們拒絕附帶條件會損害我們使命的捐款。我曾拒絕一位富商的大額捐款，因為附加條件會影響我們服務的純粹性。第三，我們以尊嚴和尊重對待學生和家庭。我們不公布獎學金獲得者的身份資訊。我們強調領取政府援助是一項權利，不是羞恥的事。第四，我們永不放棄任何學生。不論他們過去的表現或行為如何，我們都歡迎他們。正如我所寫的：「我們永不拒絕，也永不放棄。」第五，我們對自己的局限保持透明。我們承認我們的工作是治標，不是治本。我們不聲稱擁有所有答案。我們只是以誠信和謙遜，盡力而為。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q20 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q20</span>
+                <span class="q-text">What values do you hope to instill in your students?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your educational philosophy and character development goals.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I hope to instill three core values. First, self-belief. Our students arrive with fragile self-esteem and years of academic failure. We help them discover that they can learn, that they can improve, that they are capable. The "compare only with yourself" philosophy teaches them that their worth is not determined by comparison with others. Second, gratitude. We want our students to appreciate the help they receive—not as charity, but as a gift from someone who believes in them. Many of our students express heartfelt gratitude to their tutors. Third, the spirit of giving back. This is the most important. We want our students to understand that when they receive help, they become part of a chain of giving. 18.6% of our scholarship recipients commit to becoming volunteer tutors themselves. They embody the principle of "life affects life." They understand that "it is more blessed to give than to receive." These values—self-belief, gratitude, and giving back—are the true measure of our success.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我希望灌輸三個核心價值。第一，自信。我們的學生帶著脆弱的自尊和多年的學業失敗來到我們面前。我們幫助他們發現他們能夠學習、能夠進步、有能力。「只與自己比較」的理念教導他們，他們的價值不是由與他人的比較決定的。第二，感恩。我們希望學生感激他們所得到的幫助——不是作為施捨，而是作為來自相信他們的人的禮物。我們許多學生對導師表達衷心的感謝。第三，回饋的精神。這是最重要的。我們希望學生明白，當他們接受幫助時，他們就成為給予鏈條的一部分。18.6%的獎學金獲得者承諾自己成為義務導師。他們體現了「生命影響生命」的原則。他們明白「施比受更為有福」。這些價值——自信、感恩和回饋——是我們成功與否的真正衡量標準。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="section" id="s6">
+        <div class="section-title"><span class="num">6</span> Vision &amp; Systemic Change</div>
+
+        <!-- Q21 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q21</span>
+                <span class="q-text">What is your vision for the future of PCFTW?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your long-term vision and aspirations.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">My vision is paradoxical: I hope PCFTW will one day become unnecessary. If Hong Kong's schools genuinely provided appropriate support to all students regardless of family background, the third education system of free tutoring would have no reason to exist. That is the ultimate goal. Until that transformation occurs, however, we must continue to expand and deepen our services. In the near term, we aim to serve more students, recruit more tutors, and expand our programmes. We want to bring our LearningX AI education initiative to more grassroots students, ensuring they are not left behind in the digital divide. We want to establish more regional centres in areas with high concentrations of disadvantaged families. We want to strengthen our research partnerships to continue generating evidence of what works. In the longer term, we want to advocate for systemic reform. We want to work with policymakers, educators, and other organizations to build a truly equitable education system. And ultimately, we want to cultivate a culture of giving—a society where every person who has received help passes it forward. That is the legacy I hope to leave: not an organization, but a movement.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我的願景是矛盾的：我希望PCFTW有一天會變得不再被需要。如果香港的學校真正能為所有學生提供適切的支援，不論家庭背景，那麼免費補習的第三個教育系統就沒有存在的理由了。這是終極目標。然而，在那個轉變發生之前，我們必須繼續擴大和深化我們的服務。短期內，我們的目標是服務更多學生、招募更多導師、擴展我們的計劃。我們希望將LearningX人工智能教育計劃帶給更多基層學生，確保他們不會在數碼鴻溝中被遺棄。我們希望在弱勢家庭集中的地區設立更多地區中心。我們希望加強我們的研究合作，繼續產生關於什麼有效的證據。長遠而言，我們希望倡導系統性改革。我們希望與政策制定者、教育工作者和其他組織合作，建立一個真正公平的教育制度。而最終，我們希望培育一種給予的文化——一個每個受過幫助的人都會將善意傳遞下去的社會。這就是我希望留下的遺產：不是一個機構，而是一場運動。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q22 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q22</span>
+                <span class="q-text">If you could change one thing about Hong Kong's education system, what would it be?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess your understanding of systemic issues and your vision for reform.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">If I could change one thing, I would change the system from one that sorts and selects students to one that supports and develops every student. Our current system is oriented toward credential production and competitive sorting rather than universal student development. It is designed for the average and above-average student. Those who cannot keep up are left behind. They are retained, labelled, and ultimately discarded. This is not education. This is a sorting mechanism. What I would want instead is a system where every school, every teacher, has the time and resources to provide genuine support to every student—especially those who are struggling. A system where "equality of learning rights" is not just a slogan but a lived reality. A system where no child is made to feel that they are worthless because they cannot pass an examination. A system where education is about growth, not ranking. Of course, this is a systemic change that requires political will, resources, and a shift in mindset. But until that change happens, organizations like PCFTW will continue to do what we can to fill the gap. We are not the solution. We are a bridge—until the system itself becomes what it should be.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">如果我能夠改變一件事，我會將制度從一個篩選和淘汰學生的制度，改變為一個支援和發展每個學生的制度。我們現行的制度是為了憑證生產和競爭性篩選，而不是為了普遍學生的發展。它是為中等和中等以上的學生設計的。那些跟不上的人被遺棄。他們被留級、被標籤，最終被拋棄。這不是教育。這是篩選機制。我希望取而代之的是一個制度，讓每所學校、每位教師都有時間和資源，為每個學生——特別是那些掙扎中的學生——提供真正的支援。一個「學習權利平等」不僅是口號而是現實的制度。一個沒有孩子因為考試不合格而覺得自己毫無價值的制度。一個教育是關於成長而非排名的制度。當然，這是系統性的變革，需要政治意願、資源和心態的轉變。但在那個改變發生之前，像PCFTW這樣的組織將繼續盡我們所能填補缺口。我們不是解決方案。我們是一座橋樑——直到制度本身成為它應該成為的樣子。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="section" id="s7">
+        <div class="section-title"><span class="num">7</span> Legacy &amp; the Award</div>
+
+        <!-- Q23 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q23</span>
+                <span class="q-text">What does "legacy" mean to you personally?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To see if your philosophy aligns with the award's values.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Legacy is not what you achieve—it is what continues after you. It is the student who becomes a tutor. It is the parent who says, "My child now believes in themselves." It is the volunteer who says, "This changed my life too." Legacy is a ripple that keeps spreading. I don't want to be remembered as the founder of an organisation. I want to be remembered as someone who believed in every child's potential—and who built a system that proved it.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">遺產不是你所成就的——而是你身後繼續的東西。是那個成為導師的學生。是那位說「我的孩子現在相信自己了」的家長。是那位說「這也改變了我的人生」的義工。遺產是不斷擴散的漣漪。我不想被記住為一個機構的創辦人。我想被記住為一個相信每個孩子潛力的人——並建立了一個證明這一點的制度。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q24 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q24</span>
+                <span class="q-text">What do you consider your greatest legacy?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your self-perceived impact and values.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">My greatest legacy is not an organization. It is a culture. It is the culture of "pay it forward"—the understanding that when you receive help, you pass it on. About 19% of our scholarship recipients become volunteer tutors. That is nearly one in five. These are students who were told they would never succeed, who are now giving back to others. That is the legacy. It is also the culture of "compare only with yourself"—the understanding that your worth is not determined by comparison with others, but by your own growth. It is the culture of "never give up"—the commitment to every student, regardless of their past. And it is the culture of "equality of learning rights"—the belief that every child, regardless of family background, deserves the opportunity to learn and grow. If I have built anything, it is a community of people who share these values. An organization may fade. A building may crumble. But a culture, once planted, can grow and spread in ways we cannot imagine. That is my legacy. That is what I hope will endure.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我最大的遺產不是一個機構。而是一種文化。是「傳遞善意」的文化——理解到當你接受幫助時，你會將它傳遞下去。19%的獎學金獲得者成為義務導師。這幾乎是五分之一。這些是曾被說永遠不會成功的學生，現在正在回饋他人。這就是遺產。它也是「只與自己比較」的文化——理解到你的價值不是由與他人的比較決定的，而是由你自己的成長決定的。它是「永不放棄」的文化——對每個學生的承諾，不論他們的過去。它是「學習權利平等」的文化——相信每個孩子，不論家庭背景，都值得擁有學習和成長的機會。如果我建立了什麼，那就是一個分享這些價值觀的社群。一個機構可能會消逝。一座建築可能會崩塌。但一種文化，一旦種下，可以以我們無法想像的方式生長和傳播。這就是我的遺產。這就是我希望能夠延續的東西。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q25 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q25</span>
+                <span class="q-text">How would you like to be remembered?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your personal values and humility.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I would like to be remembered not as a hero or a saint, but as someone who tried. Someone who saw a problem and refused to look away. Someone who believed that every child deserves a chance, and who acted on that belief. I would like to be remembered as a teacher—not just someone who taught in a classroom, but someone who taught by example, who showed that it is possible to live a life of purpose and service. I would like to be remembered as a husband who was supported by an extraordinary woman, and who tried to honour her memory through his work. And I would like to be remembered as a founder who built something that outlasted him—not an organization, but a movement. A movement of people who believe in "equality of learning rights." A movement of people who "compare only with themselves." A movement of people who "pay it forward." If I am remembered in this way, then I will have succeeded. And perhaps, one day, when the education system truly serves all students, PCFTW will be remembered only as a footnote—a small, temporary remedy that helped for a time. That would be the greatest legacy of all.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我希望被記住，不是作為英雄或聖人，而是作為一個嘗試過的人。一個看到問題並拒絕視而不見的人。一個相信每個孩子都值得擁有機會，並將這個信念付諸行動的人。我希望被記住為一位教師——不僅是在教室裡教書的人，而是以身作則的人，展示了一種過有意義和服務的生活是可能的。我希望被記住為一位丈夫，被一位非凡的女性支持，並試圖通過他的工作來紀念她。我希望被記住為一位創辦人，建立了一些比他更持久的東西——不是一個機構，而是一場運動。一場相信「學習權利平等」的人的運動。一場「只與自己比較」的人的運動。一場「傳遞善意」的人的運動。如果我以這種方式被記住，那麼我就成功了。也許有一天，當教育制度真正服務所有學生時，PCFTW將只被記住為一個註腳——一個曾經有所幫助的小小的、暫時的補救。那將是最偉大的遺產。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q26 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q26</span>
+                <span class="q-text">What does this award mean to you personally?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess your humility and motivation.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">This award is not about me. It is about the thousands of students who have walked through our doors, the over 20,000 volunteer tutors who have given their time and hearts, the donors who have trusted us with their resources, and the staff who have worked tirelessly behind the scenes. Any recognition I receive is a recognition of all of them. I am simply the representative. On a personal level, this award is an affirmation that the path I chose—leaving a secure position, starting from nothing, building something new—was the right path. It is also a reminder of the sacrifices made by my family, especially my late wife, who supported my decision and bore the economic and psychological pressures that came with it. I dedicate any honour I receive to her. And finally, this award is a call to continue. It is not a destination but a milestone. There is still so much work to be done. Over 2,000 students are still waiting. The system still fails the most vulnerable. We cannot stop now.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">這個獎項不是關於我。它是關於數千名走進我們門口的學生，超過20,000名付出時間和心力的義務導師，信任我們並提供資源的捐款者，以及在幕後孜孜不倦工作的員工。我收到的任何認可，都是對他們所有人的認可。我只是代表。在個人層面上，這個獎項是對我選擇的道路的肯定——離開一個穩定的職位，從零開始，建立新的事物——是正確的道路。它也是對我家人的犧牲的提醒，特別是我已故的妻子，她支持我的決定，並承受了隨之而來的經濟和心理壓力。我將收到的任何榮譽獻給她。最後，這個獎項是繼續前行的呼召。它不是終點，而是里程碑。還有那麼多工作要做。超過2,000名學生仍在等待。制度仍然辜負最脆弱的人。我們現在不能停下來。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q27 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q27</span>
+                <span class="q-text">How does it feel to be recognized internationally?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To assess your perspective on recognition and its role in your work.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I am deeply honoured and humbled. But I must be honest: I did not start this work for recognition. I started it because I could not look away from the suffering of disadvantaged students. International recognition is meaningful because it shines a light on the issue of educational inequality. It tells the world that what we are doing in Hong Kong matters—not just for Hong Kong, but as a model for other communities facing similar challenges. It validates the work of our volunteers, donors, and staff. And it opens doors for collaboration and learning. But I also know that recognition is not the goal. The goal is to serve students. The goal is to build a more just education system. The goal is to make PCFTW unnecessary. If this award helps us get closer to that goal, then it is truly valuable. If it becomes an end in itself, then we have lost our way. I will accept this honour with gratitude and humility, and I will use it to continue the work.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我深感榮幸和謙卑。但我必須誠實：我開始這項工作不是為了認可。我開始是因為我無法對弱勢學生的苦難視而不見。國際認可有意義，因為它照亮了教育不平等的問題。它告訴世界，我們在香港所做的事情很重要——不僅對香港，而且作為其他面臨類似挑戰的社區的榜樣。它肯定了我們的義工、捐款者和員工的工作。它也為合作和學習打開了大門。但我也知道，認可不是目標。目標是服務學生。目標是建立一個更公平的教育制度。目標是讓PCFTW不再被需要。如果這個獎項幫助我們更接近那個目標，那麼它才是真正有價值的。如果它本身成為目的，那麼我們就迷失了方向。我會以感恩和謙卑接受這份榮譽，並用它來繼續這項工作。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q28 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q28</span>
+                <span class="q-text">If you win this award, how will you use it?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To see how you would leverage the recognition.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">If I am fortunate enough to receive this award, I would use it not merely as a financial contribution, but as a platform to amplify a message that has been at the heart of my life's work: every child, regardless of family background, deserves the right to learn, to grow, and to dream. The USD 10,000 prize is welcome. It can support our work. But the greater value of this award lies not in the money itself. It lies in the recognition it represents, and the awareness it can create. The value is that education is not a privilege—it is a right. And the goal is to increase awareness, inspire action, and build a community that believes, as I do, that every child deserves the chance to learn, to grow, and to shine.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">如果我有幸獲得這個獎項，我不會僅僅將它視為一筆財務貢獻，而是作為一個平台，放大一個一直是我畢生工作核心的訊息：每個孩子，不論家庭背景，都應該有學習、成長和做夢的權利。10,000美元的獎金是受歡迎的。它可以支持我們的工作。但這個獎項更大的價值不在於金錢本身。而在於它所代表的認可，以及它能創造的關注。我會用它來傳遞善意。訊息是：沒有孩子應該因為貧窮而被遺棄。價值是：教育不是特權——而是權利。目標是提高關注、激發行動，並建立一個社群，相信——正如我所相信的——每個孩子都值得擁有學習、成長和發光的機會。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q29 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q29</span>
+                <span class="q-text">What would you say to the judges who are deciding?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To see how you summarize your case and appeal to the judges.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I would say: look at the students. Look at the 20,000 who received help. Look at the peer-reviewed research that validates our model. This is not just my story—it is their story. And it is a story that proves that when we invest in the most vulnerable, we transform not just individuals, but families, communities, and generations. That is the legacy I offer. I would also say: this award is not about honouring me. It is about honouring every volunteer who gave their time, every donor who trusted us, every staff member who worked behind the scenes, and every student who dared to believe in themselves. I am simply the representative.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我會說：看看學生。看看那20,000名接受幫助的人。看看驗證我們模式的同行評審研究。這不僅僅是我的故事——這是他們的故事。這是一個證明，當我們投資於最脆弱的人時，我們不僅改變個人，還改變家庭、社區和世代。這就是我提供的遺產。我還會說：這個獎項不是為了表彰我。它是為了表彰每一位付出時間的義工、每一位信任我們的捐款者、每一位在幕後工作的員工，以及每一位敢於相信自己能力的學生。我只是代表。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q30 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q30</span>
+                <span class="q-text">Why should you win over other finalists who may have similar impact?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To test humility and self-awareness.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">I cannot speak for other finalists—I am sure their work is extraordinary. What I can say is that our model is not just impactful; it is replicable, evidence-based, and sustainable. We have peer-reviewed research validating our approach. We have a self-sustaining "Pay It Forward" cycle. And we have refused to compromise our ethics, even when it cost us. I believe legacy is built not just on results, but on integrity. That is what we have tried to embody. I would be honoured to stand alongside other finalists, and I believe we can all learn from each other.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我無法代表其他入圍者發言——我相信他們的工作是非凡的。我能說的是，我們的模式不僅有影響力，而且是可複製的、基於證據的和可持續的。我們有同行評審研究驗證我們的方法。我們有一個自我延續的「傳遞善意」循環。我們拒絕妥協我們的道德，即使為此付出代價。我相信遺產不僅建立在成果上，還建立在誠信上。這就是我們試圖體現的。我很榮幸能與其他入圍者並肩，我相信我們都能互相學習。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q31 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q31</span>
+                <span class="q-text">If you don't win, what will you do?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To see if your commitment is conditional on recognition.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">Nothing changes. The work continues. Winning would be an honour, but it is not the reason we do this. The students are the reason. The families are the reason. The legacy is already being built—with or without an award. I will return to Hong Kong, keep tutoring, keep recruiting volunteers, and keep fighting for every child's right to learn. That is my commitment. An award does not validate the work; the work validates itself through the lives it changes.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">什麼都不會改變。工作繼續。獲獎會是一種榮譽，但這不是我們做這件事的原因。學生是原因。家庭是原因。遺產已經在建立——無論有沒有獎項。我會回到香港，繼續補習，繼續招募義工，繼續為每個孩子的學習權利而奮鬥。這是我的承諾。獎項不能肯定工作；工作通過它改變的生命來肯定自己。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="section" id="s8">
+        <div class="section-title"><span class="num">8</span> Personal Reflections</div>
+
+        <!-- Q32 -->
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q32</span>
+                <span class="q-text">What has been your greatest joy in this work?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="why-text"><strong>Why they ask:</strong> To understand your emotional connection to the work.</div>
+                    <div class="answer-block">
+                        <span class="label en">English</span>
+                        <p class="answer-text">My greatest joy is witnessing transformation. Not just academic transformation, though that is meaningful—a student who goes from failing to passing, from despair to hope, from being told "you are not good enough" to being admitted to university. But the deeper joy is witnessing the transformation of character. It is seeing a student who once felt ashamed of receiving help become a volunteer tutor themselves. It is seeing a student who was told they would never succeed become a mentor to others. It is seeing the "pay it forward" spirit take root and grow. One of my most cherished memories is of a student who, after receiving tutoring and gaining admission to university, returned to register as a volunteer tutor. She said to me, "I want to pass on the help I received." That, to me, is the greatest reward. It is not about what we give to students. It is about who they become. And when they become givers, when they become mentors, when they become people who believe in others as we believed in them—that is the joy that sustains me.</p>
+                    </div>
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">我最大的喜悅是見證轉變。不僅是學術上的轉變，雖然那也有意義——一個學生從不合格到合格，從絕望到希望，從被說「你不夠好」到被大學錄取。但更深的喜悅是見證品格的轉變。是看到一個曾經為接受幫助而感到羞恥的學生成為義務導師。是看到一個曾被說永遠不會成功的學生成為他人的導師。是看到「傳遞善意」的精神扎根和成長。我最珍惜的回憶之一，是一個學生在接受補習並獲大學錄取後，回來註冊成為義務導師。她對我說：「我想把我收到的幫助傳遞下去。」對我來說，這是最大的回報。不是我們給了學生什麼。而是他們成為了什麼樣的人。當他們成為給予者，當他們成為導師，當他們成為像我們相信他們那樣相信他人的人——這就是支撐我的喜悅。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="section" id="s9">
+        <div class="section-title"><span class="num">9</span> Questions for the Judges (Optional)</div>
+
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q33</span>
+                <span class="q-text">What qualities do you look for in a Legacy Educator Award winner?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">「你們在Legacy Educator Award獲獎者身上尋找什麼品質？」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="q-card">
+            <div class="q-header" onclick="toggle(this)">
+                <span class="q-num">Q34</span>
+                <span class="q-text">How do you see the role of community-based education models in complementing formal systems?</span>
+                <span class="q-toggle">&#9660;</span>
+            </div>
+            <div class="q-body">
+                <div class="q-inner">
+                    <div class="answer-block">
+                        <span class="label zh">中文</span>
+                        <p class="answer-text zh">「你們如何看待社區為本的教育模式在補充正規制度方面的角色？」</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="section" id="s10">
+        <div class="section-title"><span class="num">10</span> Final Tips for Q&amp;A</div>
+
+        <table class="tips-table">
+            <thead>
+                <tr>
+                    <th style="width:50%;">&#10004; Do</th>
+                    <th style="width:50%;">&#10008; Don't</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="do-text">Pause and breathe before answering</td>
+                    <td class="dont-text">Rush your answer</td>
+                </tr>
+                <tr>
+                    <td class="do-text">Use specific numbers and stories</td>
+                    <td class="dont-text">Speak in generalities</td>
+                </tr>
+                <tr>
+                    <td class="do-text">Acknowledge the question's importance</td>
+                    <td class="dont-text">Dismiss or deflect</td>
+                </tr>
+                <tr>
+                    <td class="do-text">Link back to legacy and impact</td>
+                    <td class="dont-text">Wander off-topic</td>
+                </tr>
+                <tr>
+                    <td class="do-text">Be humble and grateful</td>
+                    <td class="dont-text">Sound arrogant or defensive</td>
+                </tr>
+                <tr>
+                    <td class="do-text">End with a forward-looking statement</td>
+                    <td class="dont-text">End on a negative or uncertain note</td>
+                </tr>
+                <tr>
+                    <td class="do-text">Keep answers to 60-90 seconds</td>
+                    <td class="dont-text">Give a 5-minute monologue</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Prepared for the Legacy Educator Award 2026 &bull; Global Educator Award (GEA) &bull; UPSI</p>
+        <p>Principal Chan Hung &mdash; Principal Chan Free Tutorial World</p>
+    </div>
+
+</div>
+
+<script>
+    function toggle(header) {
+        const body = header.nextElementSibling;
+        const toggle = header.querySelector('.q-toggle');
+        body.classList.toggle('open');
+        toggle.textContent = body.classList.contains('open') ? '\u25B2' : '\u25BC';
+    }
+
+    // Open first question by default
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstBody = document.querySelector('.q-body');
+        if (firstBody) {
+            firstBody.classList.add('open');
+            const toggle = firstBody.previousElementSibling.querySelector('.q-toggle');
+            if (toggle) toggle.textContent = '\u25B2';
+        }
+    });
+</script>
+
+</body>
+</html>
