@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Legacy Educator Award 2026 – Submission Content | Principal Chan Hung</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1a1a2e;
+    line-height: 1.75;
+    padding: 24px 16px;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    background: linear-gradient(135deg, #0d2b45 0%, #1d5b8f 100%);
+    color: #fff;
+    padding: 48px 40px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 28px;
+    box-shadow: 0 10px 30px rgba(13, 43, 69, 0.25);
+  }
+  .header h1 { font-size: 2em; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.3px; }
+  .header .sub { font-size: 1.1em; opacity: 0.92; font-weight: 300; }
+  .header .meta { margin-top: 14px; font-size: 0.92em; opacity: 0.85; }
+  .header .badge {
+    display: inline-block; margin-top: 16px; padding: 7px 20px;
+    border: 1px solid rgba(255,255,255,0.35); border-radius: 40px;
+    font-size: 0.82em; letter-spacing: 0.6px; background: rgba(255,255,255,0.1);
+  }
+
+  /* Nav */
+  .nav {
+    background: #fff; border-radius: 12px; padding: 22px 30px;
+    margin-bottom: 28px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #1d5b8f;
+  }
+  .nav h2 { font-size: 1.05em; color: #0d2b45; margin-bottom: 12px; }
+  .nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 10px; }
+  .nav a {
+    display: inline-block; padding: 7px 16px; background: #eef4fa;
+    color: #1d5b8f; text-decoration: none; border-radius: 20px;
+    font-size: 0.88em; font-weight: 500; transition: all 0.2s;
+  }
+  .nav a:hover { background: #1d5b8f; color: #fff; }
+
+  /* Section */
+  .section {
+    background: #fff; border-radius: 12px; padding: 34px 38px;
+    margin-bottom: 28px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  .section-head {
+    border-bottom: 3px solid #e8edf3; padding-bottom: 16px; margin-bottom: 26px;
+  }
+  .section-head .tag {
+    display: inline-block; background: #0d2b45; color: #fff;
+    padding: 4px 14px; border-radius: 6px; font-size: 0.75em;
+    font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .section-head h2 { font-size: 1.45em; color: #0d2b45; margin-bottom: 4px; }
+  .section-head .desc { font-size: 0.92em; color: #667; font-style: italic; }
+
+  /* Sub-block */
+  .block {
+    border: 1px solid #e4e9f0; border-radius: 10px;
+    margin-bottom: 22px; overflow: hidden;
+  }
+  .block-title {
+    background: #f6f9fc; padding: 15px 22px; border-bottom: 1px solid #e4e9f0;
+    font-weight: 700; color: #0d2b45; font-size: 1.02em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .block-title .n {
+    background: #1d5b8f; color: #fff; width: 28px; height: 28px;
+    border-radius: 50%; display: inline-flex; align-items: center;
+    justify-content: center; font-size: 0.78em; flex-shrink: 0;
+  }
+  .block-body { padding: 20px 22px; }
+
+  /* Language labels */
+  .lang {
+    display: inline-block; font-size: 0.72em; font-weight: 700;
+    letter-spacing: 0.8px; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 4px; margin-bottom: 10px;
+  }
+  .lang.en { background: #d4edda; color: #155724; }
+  .lang.zh { background: #cce5ff; color: #004085; }
+
+  .en-text { font-size: 0.95em; color: #2c2c3e; margin-bottom: 20px; text-align: justify; }
+  .zh-text {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans SC', sans-serif;
+    font-size: 0.95em; color: #1a1a2e; text-align: justify;
+    border-top: 1px dashed #dde3ea; padding-top: 18px;
+  }
+
+  /* Lists */
+  ul.bullets { padding-left: 22px; margin-top: 8px; }
+  ul.bullets li { margin-bottom: 7px; font-size: 0.94em; }
+  .zh-text ul.bullets li { font-family: inherit; }
+
+  /* Stat highlight */
+  .stat {
+    display: inline-block; background: #fff3cd; color: #7a5b00;
+    padding: 2px 8px; border-radius: 4px; font-weight: 700;
+    font-size: 0.9em;
+  }
+  .stat-blue {
+    display: inline-block; background: #e3f0ff; color: #004a99;
+    padding: 2px 8px; border-radius: 4px; font-weight: 700;
+    font-size: 0.9em;
+  }
+
+  /* Quote */
+  .quote {
+    border-left: 4px solid #1d5b8f; background: #f8fbfe;
+    padding: 12px 18px; margin: 12px 0; font-style: italic;
+    color: #33475b; font-size: 0.93em; border-radius: 0 6px 6px 0;
+  }
+
+  /* Footer */
+  .footer {
+    text-align: center; padding: 26px 16px; color: #889;
+    font-size: 0.83em; line-height: 1.8;
+  }
+
+  /* Print */
+  @media print {
+    body { background: #fff; padding: 0; }
+    .header { border-radius: 0; box-shadow: none; }
+    .section { box-shadow: none; border: 1px solid #ddd; page-break-inside: avoid; }
+    .block { page-break-inside: avoid; }
+    .nav { display: none; }
+  }
+
+  /* Mobile */
+  @media (max-width: 700px) {
+    .header { padding: 30px 18px; }
+    .header h1 { font-size: 1.35em; }
+    .section { padding: 20px 16px; }
+    .block-title { padding: 12px 14px; font-size: 0.94em; }
+    .block-body { padding: 14px; }
+    .nav ul { flex-direction: column; }
+    .nav a { display: block; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>THE LEGACY EDUCATOR AWARD 2026</h1>
+    <div class="sub">Submission Content — For Interview Preparation</div>
+    <div class="meta"><strong>Chan Hung</strong> &bull; Principal Chan Free Tutorial World (Hong Kong), Founder</div>
+    <div class="badge">GLOBAL EDUCATOR AWARD (GEA) 2026 &bull; UPSI</div>
+  </div>
+
+  <!-- NAV -->
+  <div class="nav">
+    <h2>&#128218; Quick Navigation</h2>
+    <ul>
+      <li><a href="#a">Section A — Lifetime Contribution</a></li>
+      <li><a href="#b">Section B — Impact on Learners</a></li>
+      <li><a href="#c">Section C — Scholarly / Professional Legacy</a></li>
+      <li><a href="#d">Section D — Mentorship &amp; Capacity Building</a></li>
+      <li><a href="#e">Section E — Ethics, Values &amp; Influence</a></li>
+    </ul>
+  </div>
+
+  <!-- ================= SECTION A ================= -->
+  <div class="section" id="a">
+    <div class="section-head">
+      <span class="tag">SECTION A</span>
+      <h2>Lifetime Contribution to Education</h2>
+      <div class="desc">Demonstrates sustained and significant contributions to education across career span.</div>
+    </div>
+
+    <!-- A1 -->
+    <div class="block">
+      <div class="block-title"><span class="n">1</span> Career Contribution Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan Hung's career is a testament to a lifelong, unwavering commitment to education, spanning over three decades. His journey began in 1992 as a teacher, where he dedicated himself to "education for all," a philosophy that would define his entire career. He progressed to leadership roles, serving as a Vice-Principal and then as the founding Principal of a Direct Subsidy Scheme (DSS) secondary school in 2003. His tenure in formal education was marked by a deep concern for disadvantaged students, which ultimately led him to make a defining decision. In 2009, he resigned from his position as a well-paid principal to address the fundamental inequalities he saw in the system. He founded the "Principal Chan Free Tutorial World" (PCFTW), formally registered as a charity in 2011. This marked a radical and selfless career shift from institutional leadership to a pioneering social initiative. For over 15 years, he has led PCFTW, building it from a one-man operation into a robust "third education system" that has mobilized over 20,000 volunteer tutors to serve over 20,000 underprivileged students. This sustained dedication—from teacher to principal to founder of a major charitable organization—demonstrates a lifelong career wholly devoted to advancing educational opportunity.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的教育生涯是對教育事業終身奉獻的明證，跨越三十多年。他的旅程始於1992年，當時他是一名教師，致力於「有教無類」的理念，這一理念貫穿了他的整個職業生涯。他逐步晉升到領導職位，擔任副校長，然後在2003年成為一所直資中學的創校校長。他在正規教育界的任期以對弱勢學生的深切關注為標誌，最終促使他做出了一個決定性的決定。2009年，他辭去高薪校長職位，以解決他在制度中看到的基本不平等。他創辦了「陳校長免費補習天地」（PCFTW），並於2011年正式註冊為慈善機構。這標誌著從機構領導到開創性社會倡議的激進而無私的職業轉變。15年來，他領導PCFTW，將其從一人運作發展為一個強大的「第三個教育系統」，動員了超過20,000名義務導師，服務超過20,000名弱勢學生。這種持續的奉獻——從教師到校長再到主要慈善機構的創辦人——展示了一個完全致力於促進教育機會的終身職業。
+        </div>
+      </div>
+    </div>
+
+    <!-- A2 -->
+    <div class="block">
+      <div class="block-title"><span class="n">2</span> Educational Leadership Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan's leadership is characterized by his ability to influence and advance education both within and beyond traditional systems. Before founding PCFTW, he demonstrated leadership as the founding Principal of a secondary school in Hong Kong, a role where he shaped institutional culture and curriculum. His broader influence within the system is evidenced by his tenure as Secretary of the Hong Kong Direct Subsidy Scheme Schools Council and Vice-Chairman of the Private Schools Federation, indicating his engagement with education policy at a high level. However, his most profound and impactful leadership is in founding and directing PCFTW. He pioneered the innovative "one-on-one, volunteer-led tutoring model" to provide differentiated instruction and build trust-based relationships that the formal school system and unaffordable commercial tutoring could not offer for grassroots students. His vision has consistently expanded to address the whole child, creating free preschool programmes (Playgroups), arts talent development centres, and even a future-focused "LearningX" centre for AI education. This demonstrates transformative leadership in creating a scalable, sustainable, and community-driven educational solution that has significantly advanced educational equity in Hong Kong.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的領導力體現在他在傳統制度內外影響和推進教育的能力。在創辦PCFTW之前，他作為香港一所中學的創校校長展示了領導力，在這一角色中他塑造了機構文化和課程。他在制度內更廣泛的影響力體現在他擔任香港直資學校議會秘書和私立學校聯會副主席的任期，表明他在高層參與教育政策。然而，他最深刻和最具影響力的領導力在於創辦和指導PCFTW。他開創了創新的「一對一、義工主導的補習模式」，提供因材施教並建立信任關係，這是正規學校制度和無法負擔的商業補習無法為基層學生提供的。他的願景不斷擴展以應對全人發展，創辦了免費學前班、才藝發展中心和甚至面向未來的「LearningX」人工智能教育中心。這展示了在創建可擴展、可持續和社區驅動的教育解決方案方面的轉化性領導力，顯著推進了香港的教育平等。
+        </div>
+      </div>
+    </div>
+
+    <!-- A3 -->
+    <div class="block">
+      <div class="block-title"><span class="n">3</span> Recognition of Contribution Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan Hung's contributions have been recognized through numerous prestigious awards, validating his sustained and significant impact on the educational landscape. Key accolades include:
+          <ul class="bullets">
+            <li><strong>2024 – "2024 Touching Hong Kong Figure"</strong>, Hong Kong Ta Kung Wen Wei Media Group: A testament to his inspirational role and societal impact.</li>
+            <li><strong>2024 – "Child Rescue Award 2024"</strong>, Save the Children: Recognizing his direct work in protecting and uplifting the lives of vulnerable children.</li>
+            <li><strong>2017 – Honorary Fellow</strong>, The Education University of Hong Kong: The highest recognition for outstanding contributions to education, awarded for his many years of contributions.</li>
+            <li><strong>2016 – Outstanding Alumni Award</strong>, Hong Kong Baptist University: Highlighting his exceptional professional achievements and service to the community.</li>
+            <li><strong>2015 – Outstanding Leader Award (Education and Technology)</strong>, Sing Tao Daily News Group: Acknowledging his leadership in educational innovation.</li>
+            <li><strong>2013 – "Eighth Love Award"</strong>, Hong Kong, Macau, Taiwan Charitable Foundation: Recognizing exceptional love and compassion for others.</li>
+          </ul>
+          Collectively, these awards affirm his standing as a figure of national and international significance in the field of education. Furthermore, the organization itself has received accolades like the "Star Diamond Service Award" and the "Social Capital Builder Award," reflecting the institutional excellence he has built.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的貢獻已獲眾多著名獎項認可，肯定了他對教育領域持續而重大的影響。主要榮譽包括：
+          <ul class="bullets">
+            <li><strong>2024年——「2024感動香江人物」</strong>，香港大公文匯傳媒集團：證明他鼓舞人心的角色和社會影響。</li>
+            <li><strong>2024年——「救助兒童獎2024」</strong>，救助兒童會：表彰他在保護和提升弱勢兒童生活方面的直接工作。</li>
+            <li><strong>2017年——榮譽院士</strong>，香港教育大學：對教育卓越貢獻的最高認可，表彰他多年的貢獻。</li>
+            <li><strong>2016年——傑出校友獎</strong>，香港浸會大學：突出他卓越的專業成就和對社區的服務。</li>
+            <li><strong>2015年——傑出領袖獎（教育和科技）</strong>，星島日報集團：肯定他在教育創新方面的領導力。</li>
+            <li><strong>2013年——「第八屆愛心獎」</strong>，港澳台灣慈善基金會：表彰對他人的非凡愛心和同情。</li>
+          </ul>
+          總體而言，這些獎項確認了他作為教育領域國內和國際重要人物的地位。此外，機構本身也獲得了「星鑽服務大獎」和「社會資本動力獎」等榮譽，反映了他所建立的機構卓越。
+        </div>
+      </div>
+    </div>
+
+    <!-- A4 -->
+    <div class="block">
+      <div class="block-title"><span class="n">4</span> Programme Development Impact Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan's major initiative, PCFTW, has demonstrably strengthened the education system and its institutions by creating a comprehensive, parallel support network for those it fails to serve. The initiative has developed several major programmes:
+          <ul class="bullets">
+            <li><strong>One-on-One Academic Tutoring:</strong> As detailed in the 2025 Annual Report, this core programme has successfully matched over 20,000 students with volunteer tutors. The Student Testimonials file provides quantifiable evidence of its impact, with <span class="stat">62.1%</span> of students reporting academic gains, including students progressing from failing to passing their DSE exams and gaining admission to top universities.</li>
+            <li><strong>Free Preschool Programmes (Playgroups) &amp; Arts Centres:</strong> With centres like the Jockey Club Tai Kok Tsui Talent Development Centre, PCFTW provides equal opportunities for early childhood development (over 341 preschool student participants in the 2024–25 year) and artistic talent cultivation, evidenced by dozens of students achieving graded music and dance exam results.</li>
+            <li><strong>Innovative Initiatives like LearningX:</strong> The March 2025 launch of the LearningX Centre, supported by a research partnership with The Education University of Hong Kong, prepares grassroots students for a future with AI, ensuring they are not left behind in the "digital divide."</li>
+            <li><strong>Proving a Systemic Model:</strong> The programme development's impact is further substantiated by the "Pay It Forward" effect, where <span class="stat">18.6%</span> of scholarship recipients commit to becoming volunteer tutors themselves. This self-sustaining cycle proves that PCFTW builds capacity within the community and fosters a culture of contribution, effectively creating a new, resilient educational support system.</li>
+          </ul>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的主要倡議PCFTW通過為制度未能服務的人創建全面的平行支援網絡，明顯地加強了教育制度及其機構。該倡議已發展出幾個主要計劃：
+          <ul class="bullets">
+            <li><strong>一對一學術補習：</strong>如2025年報所述，這一核心計劃已成功為超過20,000名學生配對義務導師。學生心聲文件提供了可量化的影響證據，<span class="stat">62.1%</span>的學生報告學術進步，包括學生從DSE考試不合格到合格，並獲頂尖大學錄取。</li>
+            <li><strong>免費學前班及才藝中心：</strong>通過賽馬會大角咀才藝發展中心等中心，PCFTW為幼兒發展提供平等機會（2024-25年度超過341名學前班學生參與）和藝術才能培養，數十名學生獲得音樂和舞蹈考試的等級成績。</li>
+            <li><strong>LearningX等創新倡議：</strong>2025年3月啟動的LearningX中心，得到香港教育大學研究合作的支持，為基層學生準備人工智能的未來，確保他們不會在「數碼鴻溝」中被遺棄。</li>
+            <li><strong>證明系統性模式：</strong>計劃發展的影響進一步得到「傳遞善意」效應的證實，<span class="stat">18.6%</span>的獎學金獲得者承諾自己成為義務導師。這種自我延續的循環證明PCFTW在社區內建立能力並培育貢獻文化，有效地創建了一個新的、有韌性的教育支援系統。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION B ================= -->
+  <div class="section" id="b">
+    <div class="section-head">
+      <span class="tag">SECTION B</span>
+      <h2>Impact on Generations of Learners</h2>
+      <div class="desc">Demonstrates transformative influence on academic, professional, and personal development.</div>
+    </div>
+
+    <!-- B1 -->
+    <div class="block">
+      <div class="block-title"><span class="n">1</span> Learner Impact Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          The impact of Principal Chan Hung's work through PCFTW on learners' academic and professional development is extensive and meticulously documented. A comprehensive analysis of 656 student testimonials (2024–2026) reveals that <span class="stat">62.1%</span> of students voluntarily reported significant academic gains. Quantifiable academic improvements are well-documented across core subjects:
+          <ul class="bullets">
+            <li><strong>English:</strong> Scores have risen dramatically, with documented cases of improvement from 33 to 82 marks, from failing to achieving Level 3 or 4 in the HKDSE, and even progressing from Level 1 to Level 4. One student, an immigrant, went from failing in Form 1 to achieving Level 4 in DSE English and 23 points in their best five subjects.</li>
+            <li><strong>Mathematics:</strong> Students have progressed from a failing grade to a Level 3 in DSE Mathematics, enabling them to meet university entrance requirements. One student's Maths result improved from 21/100 to 59/100.</li>
+            <li><strong>Chinese (for ethnic minority students):</strong> Students from ethnic minority backgrounds have reported significant progress, with one individual's Chinese grade rising from 12/100 to 48/100 — a 36-point improvement. Many noted becoming confident in communicating with locals in Chinese.</li>
+            <li><strong>Science and Other Subjects:</strong> Students have consolidated foundations in physics and chemistry, moving from failing to passing in their DSE examinations. In one case, a school-predicted Level 1 in Mathematics was transformed into a passing grade after tutoring.</li>
+          </ul>
+          Beyond subject-specific improvements, the impact extends to higher education access. Numerous students directly credit PCFTW with enabling their progression to prestigious universities in Hong Kong, even competitive programmes like Dentistry.
+          <div class="quote">"Without the platform, I could not have successfully gained admission to my desired university—Hong Kong Polytechnic University." — Student</div>
+          <div class="quote">"Three years ago, receiving this scholarship was impossible for me... Now I am in university, reading my desired programme." — Student</div>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長透過PCFTW對學習者學術和專業發展的影響是廣泛且有詳細記錄的。對2024至2026年656份學生心聲的全面分析顯示，<span class="stat">62.1%</span>的學生自願報告了顯著的學術進步。可量化的學術進步在核心科目中有詳細記錄：
+          <ul class="bullets">
+            <li><strong>英文：</strong>分數大幅上升，有記錄的案例從33分升至82分，從DSE不合格到達到3級或4級，甚至從1級進步到4級。一名移民學生從中一不合格到DSE英文達到4級，最佳五科取得23分。</li>
+            <li><strong>數學：</strong>學生從DSE數學不合格進步到3級，使他們能滿足大學入學要求。一名學生的數學成績從21/100升至59/100。</li>
+            <li><strong>中文（少數族裔學生）：</strong>少數族裔學生報告了顯著進步，一名學生的中文成績從12/100升至48/100——進步36分。許多人表示能自信地用中文與本地人溝通。</li>
+            <li><strong>科學及其他科目：</strong>學生鞏固了物理和化學的基礎，從DSE不合格進步到合格。在一個案例中，學校預測數學1級，補習後轉變為合格成績。</li>
+          </ul>
+          除了科目特定的進步外，影響還延伸到高等教育機會。許多學生直接歸功於PCFTW，使他們能夠進入香港著名大學，甚至是牙醫等競爭性課程。
+          <div class="quote">「沒有這個平台，我無法成功入讀我心儀的大學——香港理工大學。」——學生</div>
+          <div class="quote">「三年前，獲得這個獎學金對我來說是不可能的……現在我在大學，攻讀我心儀的課程。」——學生</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B2 -->
+    <div class="block">
+      <div class="block-title"><span class="n">2</span> Alumni Success Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          The 2025 PCFTW Annual Report provides concrete evidence of alumni success, listing numerous former students who have gained admission to top universities and competitive programmes:
+          <ul class="bullets">
+            <li><strong>University of Hong Kong:</strong> Dentistry, Biomedical Sciences, Engineering, Quantitative Finance, and Arts.</li>
+            <li><strong>Chinese University of Hong Kong:</strong> Nursing, Computer Science and Engineering, Translation, and Chinese Language and Literature.</li>
+            <li><strong>Hong Kong University of Science and Technology:</strong> Engineering.</li>
+            <li><strong>Hong Kong Polytechnic University:</strong> Hotel and Tourism Management, Information and Artificial Intelligence Engineering, and Nursing.</li>
+            <li><strong>City University of Hong Kong:</strong> Mechanical Engineering and Creative Media.</li>
+            <li><strong>Hong Kong Baptist University, Lingnan University, and The Education University of Hong Kong.</strong></li>
+          </ul>
+          These alumni are pursuing careers in high-demand fields such as healthcare, engineering, technology, and law. Furthermore, the Student Testimonials report highlights that <span class="stat">12.8%</span> of students explicitly named specific professional aspirations (nurse, teacher, doctor, pharmacist, social worker) that emerged from their tutoring experience, demonstrating that the programme fosters concrete career ambitions.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          2025年PCFTW年報提供了校友成功的具體證據，列出了眾多獲頂尖大學和競爭性課程錄取的前學生：
+          <ul class="bullets">
+            <li><strong>香港大學：</strong>牙醫學、生物醫學、工程學、計量金融和文學。</li>
+            <li><strong>香港中文大學：</strong>護理學、計算機科學與工程、翻譯和中國語言及文學。</li>
+            <li><strong>香港科技大學：</strong>工程學。</li>
+            <li><strong>香港理工大學：</strong>酒店及旅遊管理、資訊及人工智能工程和護理學。</li>
+            <li><strong>香港城市大學：</strong>機械工程和創意媒體。</li>
+            <li><strong>香港浸會大學、嶺南大學和香港教育大學。</strong></li>
+          </ul>
+          這些校友正在從事醫療、工程、科技和法律等高需求領域的職業。此外，學生心聲報告強調，<span class="stat">12.8%</span>的學生明確指出了從補習經歷中產生的具體職業志向（護士、教師、醫生、藥劑師、社工），證明該計劃培養了具體的職業抱負。
+        </div>
+      </div>
+    </div>
+
+    <!-- B3 -->
+    <div class="block">
+      <div class="block-title"><span class="n">3</span> Teaching Excellence Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          While the primary recognition is for Principal Chan Hung himself, the teaching excellence of the PCFTW model is evidenced by the achievements and high satisfaction rates of its volunteer tutors. The Student Testimonials report notes that in surveys, <span class="stat">100%</span> of students affirmed that the "tutor is helpful to me" and that they would recommend the service to others. This statistic reflects the exceptional quality of the teaching provided by PCFTW's volunteer tutors, who are trained and supported to deliver personalized, one-on-one instruction.
+          <br><br>
+          Furthermore, the organization's recognition, such as receiving the "2024–2025 Community Hero Volunteer Award – Outstanding Community Impact Award" and being named a finalist for the "Star Diamond Service Award", validates the effectiveness of its teaching model and its broader community impact. The "Gentleman Enterprise Award – Non-Profit Organisation Award" in 2019 also underscores the ethical and effective leadership of Principal Chan in building an organization where teaching excellence is a core value.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          雖然主要的認可對象是陳校長本人，但PCFTW模式的教學卓越由其義務導師的成就和高滿意度證明。學生心聲報告指出，在調查中，<span class="stat">100%</span>的學生確認「導師對我有幫助」，並會向他人推薦這項服務。這一統計數據反映了PCFTW義務導師提供的卓越教學質量，他們接受培訓和支援，提供個性化的一對一教學。
+          <br><br>
+          此外，機構的認可，如獲得「2024-2025社區英雄義工獎——卓越社區影響力獎」和入圍「星鑽服務大獎」，驗證了其教學模式的有效性及其更廣泛的社區影響。2019年的「君子企業大獎——非牟利組織獎」也突顯了陳校長在建立一個以教學卓越為核心價值的機構方面的道德和有效領導。
+        </div>
+      </div>
+    </div>
+
+    <!-- B4 -->
+    <div class="block">
+      <div class="block-title"><span class="n">4</span> Student Testimonial Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          The student testimonials provide the most powerful and poignant evidence of the long-term, transformative impact of Principal Chan's work. The report on 656 program beneficiaries' testimonials reveals profound, life-changing outcomes:
+          <ul class="bullets">
+            <li><strong>Emotional and Confidence Transformation (51.7%):</strong> Students consistently describe their tutors as "life mentors" who helped them overcome deep-seated fear and shame. Students move from believing "I never thought I could" to "I now believe I can."</li>
+            <li><strong>Overcoming Economic Barriers (47.1%):</strong> For many, PCFTW is their "only hope" or "bridge to a better future," restoring fairness to education and breaking the cycle of intergenerational poverty.</li>
+            <li><strong>The "Pay It Forward" Effect (18.6%):</strong> 113 students explicitly committed to becoming volunteer tutors themselves, creating a self-replicating community of givers. This embodies the "life affects life" philosophy and proves that the impact extends far beyond individual academic success, shaping students into socially conscious citizens committed to serving others.</li>
+          </ul>
+          <div class="quote">"The most precious gain is that I can finally accept help without feeling ashamed. The light that once illuminated me will one day be passed on from me." — Student</div>
+          <div class="quote">"In the future, when I am capable, I hope to become a volunteer tutor... helping students receive a better education." — Student</div>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          學生心聲提供了陳校長工作長期轉化性影響最有力、最感人的證據。對656名計劃受益者心聲的報告揭示了深刻、改變生命的成果：
+          <ul class="bullets">
+            <li><strong>情感和自信轉變（51.7%）：</strong>學生一致將導師描述為「人生導師」，幫助他們克服根深蒂固的恐懼和羞恥。學生從相信「我從未想過我能做到」轉變為「我現在相信我能做到」。</li>
+            <li><strong>克服經濟障礙（47.1%）：</strong>對許多人來說，PCFTW是他們「唯一的希望」或「通往更美好未來的橋樑」，恢復了教育的公平性並打破了跨代貧窮的循環。</li>
+            <li><strong>「傳遞善意」效應（18.6%）：</strong>113名學生明確承諾自己成為義務導師，創造了一個自我複製的給予者社群。這體現了「生命影響生命」的理念，證明影響遠超出個人的學術成功，將學子塑造為致力於服務他人的有社會意識的公民。</li>
+          </ul>
+          <div class="quote">「最珍貴的收穫是我終於可以接受幫助而不感到羞恥。曾經照亮我的光，總有一天會從我這裡傳遞下去。」——學生</div>
+          <div class="quote">「將來，當我有能力時，我希望成為一名義務導師……幫助學生獲得更好的教育。」——學生</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION C ================= -->
+  <div class="section" id="c">
+    <div class="section-head">
+      <span class="tag">SECTION C</span>
+      <h2>Scholarly or Professional Legacy</h2>
+      <div class="desc">Demonstrates contributions that shape educational knowledge, practice, or professional standards.</div>
+    </div>
+
+    <!-- C1 -->
+    <div class="block">
+      <div class="block-title"><span class="n">1</span> Scholarly Contribution Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan has made substantial scholarly contributions that articulate, codify, and disseminate his innovative educational model, providing a foundational framework for understanding and replicating volunteer-led educational support for disadvantaged students.
+          <br><br>
+          His most significant scholarly work is the book <strong>《十年補天》 (Ten Years of Patching the Sky)</strong>, published in 2019. This comprehensive volume serves as both a memoir and a scholarly treatise, documenting:
+          <ul class="bullets">
+            <li><strong>The Foundational Philosophy:</strong> The book articulates his core belief in "equality of learning rights," distinguishing between formal access to education and genuine opportunity to progress. It explains the "third education system" concept—the necessity of a free tutoring system alongside formal schooling and commercial tutoring to ensure educational equity.</li>
+            <li><strong>The Pedagogical Model:</strong> It provides a rigorous rationale for the one-on-one tutoring model, explaining its pedagogical superiority for struggling students (genuine differentiated instruction) and its psychological benefits (building trust, overcoming shame and fear of failure).</li>
+            <li><strong>Practical Implementation:</strong> The book offers a detailed case study of building a large-scale volunteer organization, addressing challenges such as tutor recruitment, funding, venue selection, and programme expansion into preschool and arts education.</li>
+            <li><strong>Personal Narrative:</strong> By weaving his personal journey—from teacher to principal to founder—the book provides a compelling model of ethical leadership and the sacrifices required to pursue educational justice.</li>
+          </ul>
+          The <em>Education Model of Principal Chan Free Tutorial World</em> document further codifies his scholarly contributions, presenting a structured analysis of his pedagogical and philosophical framework.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長做出了重大的學術貢獻，闡明、編纂和傳播了他創新的教育模式，為理解和複製義工主導的弱勢學生教育支援提供了基礎框架。
+          <br><br>
+          他最重要的學術著作是2019年出版的《十年補天》。這本全面的著作既是回憶錄也是學術論文，記錄了：
+          <ul class="bullets">
+            <li><strong>基礎哲學：</strong>本書闡明了他對「學習權利平等」的核心信念，區分了形式上的教育機會和真正的進步機會。它解釋了「第三個教育系統」的概念——在正規學校教育和商業補習之外，必須有一個免費補習系統來確保教育公平。</li>
+            <li><strong>教學模式：</strong>它為一對一補習模式提供了嚴謹的理據，解釋了它對掙扎中學生的教學優越性（真正的因材施教）及其心理益處（建立信任、克服羞恥和對失敗的恐懼）。</li>
+            <li><strong>實際實施：</strong>本書提供了建立大規模義工組織的詳細案例研究，涉及導師招募、資金、場地選擇以及擴展到學前和藝術教育等挑戰。</li>
+            <li><strong>個人敘述：</strong>通過將他的個人旅程——從教師到校長再到創辦人——交織在一起，本書提供了道德領導力的引人入勝的典範以及追求教育公義所需的犧牲。</li>
+          </ul>
+          《陳校長免費補習天地教育模式》文件進一步編纂了他的學術貢獻，對他的教學和哲學框架進行了結構化分析。
+        </div>
+      </div>
+    </div>
+
+    <!-- C2 -->
+    <div class="block">
+      <div class="block-title"><span class="n">2</span> Professional Standards Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan has contributed to the establishment of professional standards and best practices for volunteer-based educational support through the development and refinement of PCFTW's operational framework. The organization's model has set a new standard for how civil society can address educational inequity:
+          <ul class="bullets">
+            <li><strong>The One-on-One Volunteer Tutoring Framework:</strong> A minimum three-month commitment to ensure continuity and relationship-building; comprehensive training and support infrastructure; geographic and temporal accessibility protocols (tutoring in public spaces like McDonald's to eliminate costs and reduce student anxiety); a robust tutor-student matching system based on individual needs and preferences; and regular monitoring and quality assurance through surveys, with 100% of students affirming that the "tutor is helpful" and that they would recommend the service.</li>
+            <li><strong>Data-Driven Quality Assurance:</strong> Systematic collection and analysis of data on student progress: 62.1% academic improvement; 51.7% confidence transformation; 47.1% overcoming economic barriers; 18.6% "Pay It Forward" effect. This commitment to measuring and documenting impact sets a professional standard for accountability in charitable education services.</li>
+            <li><strong>Expanding the Scope of Educational Support:</strong> Free preschool programmes (over 341 preschool student participants in 2024–25); arts and talent development (dozens achieving graded exam results and competition awards); and the LearningX AI Education Centre (launched March 2025) preparing grassroots students for future-ready skills.</li>
+            <li><strong>"Compare Only with Yourself" Scholarship:</strong> Rewards personal progress rather than relative ranking, challenging conventional meritocratic standards in education and emphasizing the value of growth over comparison.</li>
+          </ul>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長通過發展和完善PCFTW的運作框架，為義工主導的教育支援建立了專業標準和最佳實踐。該組織的模式為公民社會如何解決教育不平等樹立了新標準：
+          <ul class="bullets">
+            <li><strong>一對一義工補習框架：</strong>至少三個月的承諾以確保連續性和關係建立；全面的培訓和支援架構；地理和時間可及性協議（在麥當勞等公共場所補習以消除費用並減少學生焦慮）；基於個人需求和偏好的穩健師生配對系統；以及通過調查進行定期監察和質量保證，100%的學生確認「導師有幫助」並會推薦這項服務。</li>
+            <li><strong>數據驅動的質量保證：</strong>系統性地收集和分析學生成長數據：62.1%學術進步；51.7%自信轉變；47.1%克服經濟障礙；18.6%「傳遞善意」效應。這種衡量和記錄影響的承諾為慈善教育服務的問責制設定了專業標準。</li>
+            <li><strong>擴展教育支援範圍：</strong>免費學前班（2024-25年度超過341名學前班學生參與）；藝術和才藝發展（數十名學生獲得等級考試成績和比賽獎項）；以及LearningX人工智能教育中心（2025年3月啟動），為基層學生準備面向未來的技能。</li>
+            <li><strong>「只與自己比較」獎學金：</strong>獎勵個人進步而非相對排名，挑戰傳統的精英教育標準，強調成長勝於比較的價值。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- C3 -->
+    <div class="block">
+      <div class="block-title"><span class="n">3</span> Policy Influence Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan's work has demonstrably influenced education policy and institutional development in Hong Kong through advocacy, direct service provision, and collaboration with government and academic institutions:
+          <ul class="bullets">
+            <li><strong>Shaping the Discourse on Educational Equity:</strong> His sustained advocacy for educational equality, documented in 《十年補天》 and his extensive media appearances, has brought the issue of educational inequality to the forefront of public discourse. His critique of a system that "only focuses on results and school reputation" and neglects disadvantaged students has influenced policy discussions, including those around the needs of SEN students and the challenges of grassroots families. His regular column in the Sky Post Daily for over a decade has provided a sustained platform for advocating educational reform.</li>
+            <li><strong>Collaboration with Academic Institutions:</strong> PCFTW's partnership with The Education University of Hong Kong (EdUHK) for the LearningX project is a significant policy-influencing initiative. The multi-phase research project, which has developed an adaptive learning app and an AI-powered Q&amp;A forum, directly informs the development of educational technology policy and practice. The collaboration includes hosting PGDE students from the University of Hong Kong to design and teach AI syllabi, developing a platform hosting over 5,000 educational videos and a ChatGPT-powered Q&amp;A forum, and building a digital backbone for students.</li>
+            <li><strong>Serving as a Model for Systemic Reform:</strong> PCFTW's stated aspiration—to become unnecessary—is itself a form of policy advocacy. By demonstrating the need for the "third education system" and the effectiveness of community-based solutions, PCFTW implicitly calls for systemic reform of mainstream schooling. Principal Chan's vision is that "if every school could provide appropriate support to all students regardless of family background, the third education system would have no reason to exist."</li>
+            <li><strong>Institutional Recognition and Partnerships:</strong> Support from bodies such as the Hong Kong Jockey Club Charities Trust, the Social Welfare Department, the Research Grants Council, and various foundations reflects its influence on institutional development.</li>
+          </ul>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的工作通過倡導、直接服務提供以及與政府和學術機構的合作，明顯地影響了香港的教育政策和機構發展：
+          <ul class="bullets">
+            <li><strong>塑造教育公平的話語：</strong>他對教育平等的持續倡導，記錄在《十年補天》和他的大量媒體露面中，將教育不平等問題帶到了公共話語的前沿。他對一個「只注重成績和學校聲譽」而忽視弱勢學生的制度的批評，影響了政策討論，包括圍繞特殊教育需求學生的需要和基層家庭挑戰的討論。他在《晴報》超過十年的定期專欄為倡導教育改革提供了持續的平台。</li>
+            <li><strong>與學術機構合作：</strong>PCFTW與香港教育大學在LearningX項目上的合作是一項重要的政策影響倡議。這一多階段研究項目開發了自適應學習應用程式和人工智能驅動的問答論壇，直接為教育科技政策和實踐的發展提供資訊。合作包括接待香港大學的PGDE學生設計和教授人工智能課程，開發一個擁有超過5,000個教育視頻和ChatGPT驅動問答論壇的平台，以及為學生建立數碼骨幹。</li>
+            <li><strong>作為系統性改革的榜樣：</strong>PCFTW的明確願望——變得不再被需要——本身就是一種政策倡導形式。通過展示「第三個教育系統」的必要性和社區為本解決方案的有效性，PCFTW隱含地呼籲對主流學校教育進行系統性改革。陳校長的願景是「如果每所學校都能為所有學生提供適切的支援，不論家庭背景，第三個教育系統就沒有存在的理由」。</li>
+            <li><strong>機構認可和合作夥伴關係：</strong>來自香港賽馬會慈善信託基金、社會福利署、研究資助局和各種基金會的支持，反映了其對機構發展的影響。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- C4 -->
+    <div class="block">
+      <div class="block-title"><span class="n">4</span> Academic Leadership Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          While Principal Chan's primary role is as a practitioner and founder, his academic leadership is evidenced by his contributions to public discourse, his literary and journalistic work, and his recognition by academic institutions:
+          <ul class="bullets">
+            <li><strong>Major Media Contributor:</strong> Principal Chan has demonstrated academic and scholarly influence through his long-standing column in the Sky Post, where he has written for over a decade. Through this platform, he has shaped public understanding of educational issues, shared his philosophy, and advocated for policy change, reaching a wide readership of educators, parents, and policymakers.</li>
+            <li><strong>Literary and Creative Contributions:</strong> His career as an author, including his award-winning novel 《青春出於藍》 (Youth from the Basketball Court), which won the "Sixth Hong Kong Chinese Literature Biennial Award" (Youth and Children's Literature Category) in 2001, reflects a scholarly legacy of using creative writing to engage with educational and social themes.</li>
+            <li><strong>Honorary Recognition by Academic Institutions:</strong> His election as an Honorary Fellow of The Education University of Hong Kong in 2017 is a formal recognition of his academic standing and contributions to the field of education. This honour, awarded to individuals who have made "outstanding contributions to education," places him among a select group of distinguished educators.</li>
+            <li><strong>Engagement with Professional Bodies:</strong> His prior service as Secretary of the Hong Kong Direct Subsidy Scheme Schools Council and Vice-Chairman of the Private Schools Federation demonstrates a long-standing commitment to professional service and leadership within the educational community.</li>
+            <li><strong>Validation Through Peer-Reviewed Research:</strong> The publication of the study "Disadvantaged Adolescents' Well-Being in Fee-Free One-on-One Supplementary Tutoring" in the <em>European Journal of Education</em> (Yung &amp; Poon, 2025) represents a significant academic validation of Principal Chan's work. The study, funded by the Research Grants Council, positions PCFTW as a model worthy of scholarly attention.</li>
+          </ul>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          雖然陳校長的主要角色是實踐者和創辦人，但他的學術領導力體現在他對公共話語的貢獻、他的文學和新聞工作，以及學術機構對他的認可：
+          <ul class="bullets">
+            <li><strong>主要媒體撰稿人：</strong>陳校長通過他在《晴報》的長期專欄展示了學術和學術影響力，他在那裡寫了超過十年。通過這個平台，他塑造了公眾對教育問題的理解，分享了他的理念，並倡導政策變革，接觸到廣泛的教育工作者、家長和政策制定者讀者群。</li>
+            <li><strong>文學和創意貢獻：</strong>他作為作家的職業生涯，包括他獲獎的小說《青春出於藍》，該書於2001年獲得「第六屆香港中文文學雙年獎」（青少年及兒童文學組），反映了利用創意寫作參與教育和社會主題的學術遺產。</li>
+            <li><strong>學術機構的榮譽認可：</strong>他於2017年當選為香港教育大學榮譽院士，是對他的學術地位和對教育領域貢獻的正式認可。這項榮譽授予做出「對教育卓越貢獻」的個人，將他置於一群傑出教育家的精選群體中。</li>
+            <li><strong>與專業團體的接觸：</strong>他先前擔任香港直資學校議會秘書和私立學校聯會副主席，展示了對教育界專業服務和領導力的長期承諾。</li>
+            <li><strong>通過同行評審研究的驗證：</strong>研究《弱勢青少年在免費一對一補充補習中的福祉》在《歐洲教育研究期刊》（Yung &amp; Poon, 2025）的發表，代表了對陳校長工作的重大學術驗證。這項由研究資助局資助的研究將PCFTW定位為值得學術關注的模式。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION D ================= -->
+  <div class="section" id="d">
+    <div class="section-head">
+      <span class="tag">SECTION D</span>
+      <h2>Mentorship and Capacity Building</h2>
+      <div class="desc">Demonstrates commitment to nurturing future educators, researchers, or leaders in education.</div>
+    </div>
+
+    <!-- D1 -->
+    <div class="block">
+      <div class="block-title"><span class="n">1</span> Mentorship Impact Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan has established a comprehensive mentorship ecosystem through PCFTW, which directly mentors and develops volunteer tutors, many of whom are aspiring or practicing educators. His mentorship model is built on the principle of "life affects life."
+          <br><br>
+          <strong>a) Mentorship of Volunteer Tutors:</strong> The PCFTW model is fundamentally a mentorship programme, with over 20,000 volunteer tutors recruited and trained since its inception. These volunteers are guided through a structured mentorship framework:
+          <ul class="bullets">
+            <li><strong>Initial Training and Orientation:</strong> Regular Tutor Orientation Sessions held quarterly, where new tutors receive training on PCFTW's philosophy, teaching methodologies, and the one-on-one tutoring model. In the 2024–25 year, 840 participants attended 36 orientation sessions.</li>
+            <li><strong>Ongoing Professional Development:</strong> Monthly Tutor Training Activities with different themes, providing tutors with teaching strategies, classroom management techniques, and pedagogical approaches. In the reporting period, 12 sessions were held with 76 participants.</li>
+            <li><strong>Peer Learning and Support:</strong> Tutor Skills Workshops held bi-monthly, inviting experienced speakers to share teaching insights and facilitating interactive learning. In 2024–25, 13 workshops were conducted with 385 participants at an 80.8% attendance rate.</li>
+            <li><strong>Community of Practice:</strong> PCFTW maintains a Facebook tutor group where mentors share experiences, seek advice, and exchange resources.</li>
+          </ul>
+          <strong>b) Mentorship of Student Tutors (Tutees Becoming Mentors):</strong> A distinctive feature of PCFTW's mentorship model is the transformation of tutees into tutors. The Student Testimonials report documents that 18.6% of scholarship recipients (113 students) explicitly committed to becoming volunteer tutors themselves. This represents a direct mentorship pipeline where beneficiaries are mentored to become mentors, creating a self-sustaining cycle.
+          <div class="quote">"After adapting to university life, I will register as a PCFTW tutor to help more grassroots students." — Student</div>
+          <div class="quote">"I have already registered as a volunteer tutor in this programme, hoping to pass on this care and love." — Student</div>
+          <strong>c) Mentorship of Interns and Future Education Professionals:</strong> The PCFTW Internship Programme provides structured mentorship for university students interested in education and social service. In the reporting period, 17 interns from various Hong Kong tertiary institutions participated in the programme, working across four different units of the organization. Additionally, PCFTW hosts PGDE students from the University of Hong Kong to design and teach AI syllabi at the LearningX Centre.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長通過PCFTW建立了全面的導師生態系統，直接指導和發展義務導師，其中許多人是有抱負或正在執業的教育工作者。他的導師模式建立在「生命影響生命」的原則之上。
+          <br><br>
+          <strong>a) 義務導師的指導：</strong>PCFTW模式本質上是一個導師計劃，自成立以來已招募和培訓超過20,000名義務導師。這些義工通過結構化的導師框架獲得指導：
+          <ul class="bullets">
+            <li><strong>初始培訓和迎新：</strong>每季度舉行定期導師迎新會，新導師接受PCFTW理念、教學方法和一對一補習模式的培訓。在2024-25年度，840名參與者參加了36場迎新會。</li>
+            <li><strong>持續專業發展：</strong>每月舉辦不同主題的導師培訓活動，為導師提供教學策略、課堂管理技巧和教學方法。在報告期內，舉行了12場會議，76名參與者。</li>
+            <li><strong>同行學習和支援：</strong>每兩個月舉辦導師技能工作坊，邀請經驗豐富的演講者分享教學見解並促進互動學習。在2024-25年度，舉辦了13場工作坊，385名參與者，出席率80.8%。</li>
+            <li><strong>實踐社群：</strong>PCFTW維護一個Facebook導師群組，導師在這裡分享經驗、尋求建議和交流資源。</li>
+          </ul>
+          <strong>b) 學生導師的指導（受助者成為導師）：</strong>PCFTW導師模式的一個獨特特徵是將受助者轉變為導師。學生心聲報告記錄了18.6%的獎學金獲得者（113名學生）明確承諾自己成為義務導師。這代表了一條直接的導師管道，受益者被指導成為導師，創造了一個自我延續的循環。
+          <div class="quote">「適應大學生活後，我將註冊成為PCFTW導師，幫助更多基層學生。」——學生</div>
+          <div class="quote">「我已經在這個計劃中註冊為義務導師，希望將這份關懷和愛傳遞下去。」——學生</div>
+          <strong>c) 實習生和未來教育專業人士的指導：</strong>PCFTW實習生計劃為對教育和社會服務感興趣的大學生提供結構化指導。在報告期內，來自香港各高等教育機構的17名實習生參與了該計劃，在組織的四個不同單位工作。此外，PCFTW接待香港大學的PGDE學生在LearningX中心設計和教授人工智能課程。
+        </div>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="block">
+      <div class="block-title"><span class="n">2</span> Capacity Building Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan has developed extensive capacity-building initiatives that support the professional development of tutors, educators, and community members, strengthening the broader educational ecosystem.
+          <br><br>
+          <strong>a) Comprehensive Tutor Training Infrastructure:</strong>
+          <ul class="bullets">
+            <li><strong>Tutor Orientation:</strong> Quarterly sessions (12 sessions, 385 participants) introducing new tutors to PCFTW's mission, values, and operational procedures.</li>
+            <li><strong>Tutor Skills Workshops:</strong> Bi-monthly themed workshops (13 sessions, 178 participants) focusing on specific teaching skills and pedagogical approaches.</li>
+            <li><strong>Tutor Training Activities:</strong> Monthly training sessions (12 sessions, 76 participants) covering diverse topics relevant to volunteer tutoring.</li>
+            <li><strong>Regional Coordinators:</strong> A network of volunteer coordinators who receive training to facilitate tutor-student matching, conduct initial meetings, and provide ongoing support.</li>
+          </ul>
+          <strong>b) Professional Development through Partnership with Academic Institutions:</strong> PCFTW's partnership with The Education University of Hong Kong (EdUHK) represents a significant capacity-building initiative for future education leaders. The LearningX Centre serves as a laboratory for experiential learning where PGDE students design and teach AI syllabi. The research collaboration has developed a platform hosting over 5,000 educational videos and a ChatGPT-powered Q&amp;A forum. Phase III is introducing an adaptive learning app that uses AI to generate questions tailored to students' specific levels.
+          <br><br>
+          <strong>c) Capacity Building through the "Virtuous Tutor" Network:</strong> The expansion of PCFTW's tutor network beyond Hong Kong, now including volunteers from Macau, Taiwan, and Japan, builds capacity by enabling remote tutoring and knowledge exchange across borders, creating a diverse community of educators, and providing professional development opportunities through cross-cultural exchange.
+          <br><br>
+          <strong>d) Parent and Community Capacity Building:</strong>
+          <ul class="bullets">
+            <li><strong>Parent Support Services:</strong> The 2025 Annual Report documents 37 sessions with 307 parent participants, offering workshops and parent-child activities that enhance parenting skills and strengthen family relationships.</li>
+            <li><strong>PCFTW Heart Room:</strong> A free psychological counselling service providing 81 sessions for 24 families, supporting parents, students, and tutors with stress management and emotional well-being.</li>
+          </ul>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長制定了廣泛的能力建設計劃，支持導師、教育工作者和社區成員的專業發展，加強更廣泛的教育生態系統。
+          <br><br>
+          <strong>a) 全面的導師培訓架構：</strong>
+          <ul class="bullets">
+            <li><strong>導師迎新會：</strong>每季度舉行（12場會議，385名參與者），向新導師介紹PCFTW的使命、價值觀和運作程序。</li>
+            <li><strong>導師技能工作坊：</strong>每兩個月舉辦主題工作坊（13場會議，178名參與者），專注於具體教學技能和教學方法。</li>
+            <li><strong>導師培訓活動：</strong>每月培訓會議（12場會議，76名參與者），涵蓋與義務補習相關的各種主題。</li>
+            <li><strong>地區統籌員：</strong>一個義工統籌員網絡，他們接受培訓以促進師生配對、進行首次會議並提供持續支援。</li>
+          </ul>
+          <strong>b) 通過與學術機構合作的專業發展：</strong>PCFTW與香港教育大學的合作代表了對未來教育領導者的重要能力建設計劃。LearningX中心作為體驗式學習的實驗室，PGDE學生在這裡設計和教授人工智能課程。研究合作開發了一個擁有超過5,000個教育視頻和ChatGPT驅動問答論壇的平台。第三階段正在引入一個自適應學習應用程式，使用人工智能生成針對學生特定水平的問題。
+          <br><br>
+          <strong>c) 通過「義師」網絡的能力建設：</strong>PCFTW導師網絡擴展到香港以外，現在包括來自澳門、台灣和日本的義工，通過實現跨境遠程補習和知識交流、創建多元化的教育工作者社群，以及通過跨文化交流提供專業發展機會來建立能力。
+          <br><br>
+          <strong>d) 家長和社區能力建設：</strong>
+          <ul class="bullets">
+            <li><strong>家長支援服務：</strong>2025年報記錄了37場會議，307名家長參與，提供工作坊和親子活動，增強育兒技巧並加強家庭關係。</li>
+            <li><strong>補天心房：</strong>免費心理輔導服務，為24個家庭提供81場會議，支持家長、學生和導師進行壓力管理和情緒健康。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="block">
+      <div class="block-title"><span class="n">3</span> Mentee Success Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          The success of Principal Chan's mentorship is demonstrated through the remarkable achievements and career progression of his mentees—both volunteer tutors and students who have been mentored through PCFTW.
+          <br><br>
+          <strong>a) Student Success and University Admission:</strong> The 2025 Annual Report documents extensive evidence of mentee success, with 213 PCFTW students progressing to bachelor's, associate degree, and higher diploma programmes in 2024. Specific examples include admission to the University of Hong Kong (Dentistry, Biomedical Sciences, Engineering, Quantitative Finance, Arts), the Chinese University of Hong Kong (Nursing, Computer Science and Engineering, Translation, Chinese Language and Literature), HKUST (Engineering and Science), PolyU (Hotel and Tourism Management, Information and AI Engineering, Nursing), and Hong Kong Baptist University, Lingnan University, and The Education University of Hong Kong.
+          <br><br>
+          <strong>b) Alumni Career Progression:</strong> The Student Testimonials report documents the career aspirations and professional development of former students, with 12.8% of students naming specific professional goals (nurse, teacher, doctor, pharmacist, social worker, engineer, dentist). Many have already entered these professions or are pursuing relevant university programmes.
+          <br><br>
+          <strong>c) Tutees Becoming Tutors (The "Pay It Forward" Effect):</strong> The most powerful evidence of mentorship success is the 113 students (18.6% of scholarship recipients) who explicitly committed to becoming volunteer tutors.
+          <div class="quote">"I have become a tutor myself—passing on what I received. I will continue this love without forgetting my original intention." — Student</div>
+          <div class="quote">"After HKDSE, I registered as a volunteer tutor, hoping to give back to society and continue the help I once received. This made me truly understand that it is more blessed to give than to receive." — Student</div>
+          <strong>d) Volunteer Tutor Development:</strong> Many tutors report that the experience provides meaningful connection, perspective on social inequality, and personal satisfaction. The Education Model document notes that tutoring relationships "benefit tutors as much as students," with tutors gaining valuable teaching experience, enhanced communication skills, and a deeper understanding of educational inequality.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長導師指導的成功通過他的受指導者——無論是義務導師還是通過PCFTW接受指導的學生——的卓越成就和職業發展得到證明。
+          <br><br>
+          <strong>a) 學生成功和大學錄取：</strong>2025年報記錄了受指導者成功的大量證據，213名PCFTW學生在2024年升讀學士、副學士和高級文憑課程。具體例子包括獲香港大學（牙醫學、生物醫學、工程學、計量金融、文學）、香港中文大學（護理學、計算機科學與工程、翻譯、中國語言及文學）、香港科技大學（工程學和科學）、香港理工大學（酒店及旅遊管理、資訊及人工智能工程、護理學）以及香港浸會大學、嶺南大學和香港教育大學錄取。
+          <br><br>
+          <strong>b) 校友職業發展：</strong>學生心聲報告記錄了前學生的職業抱負和專業發展，12.8%的學生指出了具體的職業目標（護士、教師、醫生、藥劑師、社工、工程師、牙醫）。許多人已經進入這些職業或正在攻讀相關大學課程。
+          <br><br>
+          <strong>c) 受助者成為導師（「傳遞善意」效應）：</strong>導師指導成功最有力的證據是113名學生（18.6%的獎學金獲得者）明確承諾成為義務導師。
+          <div class="quote">「我自己也成為了導師——把我收到的傳遞下去。我會不忘初心，繼續這份愛。」——學生</div>
+          <div class="quote">「DSE後，我註冊為義務導師，希望回饋社會，繼續我曾經收到的幫助。這讓我真正明白施比受更為有福。」——學生</div>
+          <strong>d) 義務導師發展：</strong>許多導師報告稱，這段經歷提供了有意義的連結、對社會不平等的洞察和個人滿足感。教育模式文件指出，補習關係「對導師的益處不亞於對學生」，導師獲得寶貴的教學經驗、增強的溝通技巧和對教育不平等的更深入理解。
+        </div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="block">
+      <div class="block-title"><span class="n">4</span> Professional Development Contribution Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan has made significant contributions to strengthening future education leaders through a range of activities that build professional capacity and develop leadership skills.
+          <br><br>
+          <strong>a) Training Future Education Leaders through the Internship Programme:</strong> The PCFTW Internship Programme directly strengthens future education leaders by providing hands-on experience in educational programme management, tutor coordination, and community engagement; offering mentorship from experienced PCFTW staff and leadership; developing leadership and organizational skills through event planning, fundraising, and programme implementation; and building a network of future education professionals committed to educational equity.
+          <br><br>
+          <strong>b) Developing AI and Future-Ready Education Leaders:</strong> The LearningX Centre initiative, supported by EdUHK, contributes to developing future education leaders by hosting PGDE students to design and teach AI syllabi, creating a sustainable cycle of knowledge transfer, and equipping educators with skills in artificial intelligence and digital literacy.
+          <br><br>
+          <strong>c) Building Capacity through the Tutor Corps Model:</strong> The PCFTW tutor corps model itself is a professional development activity that strengthens future education leaders by providing volunteer tutors with practical teaching experience, classroom management skills, and pedagogical knowledge; offering training workshops, resources, and peer learning opportunities; and creating opportunities for tutors to take on leadership roles as Tutor Officers or regional coordinators.
+          <br><br>
+          <strong>d) Advocacy and Public Engagement:</strong> Principal Chan's sustained advocacy for educational equity, through his Sky Post Daily column, public lectures, and media appearances, contributes to the professional development of the broader education community by shaping the discourse on educational inequality and equity, providing a platform for educators to engage with critical issues, and inspiring future education leaders to pursue careers dedicated to social justice.
+          <br><br>
+          <strong>e) Recognition and Inspiration:</strong> Principal Chan's receipt of numerous awards and honours, including the Honorary Fellowship from The Education University of Hong Kong, serves as an inspiration to future education leaders.
+          <div class="quote">"Your example has inspired me to pursue a career in education and to never forget the importance of serving others." — Student, 《十年補天》</div>
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長通過一系列建立專業能力和發展領導技能的活動，為加強未來教育領導者做出了重大貢獻。
+          <br><br>
+          <strong>a) 通過實習計劃培訓未來教育領導者：</strong>PCFTW實習生計劃通過提供教育計劃管理、導師協調和社區參與的實踐經驗，直接加強未來教育領導者；提供來自經驗豐富的PCFTW員工和領導層的指導；通過活動策劃、籌款和計劃實施發展領導和組織技能；以及建立一個致力於教育公平的未來教育專業人士網絡。
+          <br><br>
+          <strong>b) 發展人工智能和面向未來的教育領導者：</strong>LearningX中心倡議，得到香港教育大學的支持，通過接待PGDE學生設計和教授人工智能課程、創造可持續的知識轉移循環，以及為教育工作者配備人工智能和數碼素養技能，為發展未來教育領導者做出貢獻。
+          <br><br>
+          <strong>c) 通過導師團隊模式建設能力：</strong>PCFTW導師團隊模式本身就是一項專業發展活動，通過為義務導師提供實踐教學經驗、課堂管理技能和教學知識，加強未來教育領導者；提供培訓工作坊、資源和同行學習機會；以及為導師創造擔任義師幹事或地區統籌員等領導角色的機會。
+          <br><br>
+          <strong>d) 倡導和公眾參與：</strong>陳校長通過他的《晴報》專欄、公開講座和媒體露面，持續倡導教育公平，通過塑造教育不平等和公平的話語、為教育工作者提供參與關鍵問題的平台，以及激勵未來教育領導者從事致力於社會公義的職業，為更廣泛教育界的專業發展做出貢獻。
+          <br><br>
+          <strong>e) 認可和激勵：</strong>陳校長獲得的眾多獎項和榮譽，包括香港教育大學的榮譽院士，激勵著未來的教育領導者。
+          <div class="quote">「您的榜樣激勵我從事教育事業，並永遠不忘服務他人的重要性。」——學生，《十年補天》</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SECTION E ================= -->
+  <div class="section" id="e">
+    <div class="section-head">
+      <span class="tag">SECTION E</span>
+      <h2>Ethics, Values &amp; Enduring Educational Influence</h2>
+      <div class="desc">Demonstrates integrity, ethical professionalism, and values-driven contributions that continue to inspire educational practice and society.</div>
+    </div>
+
+    <!-- E1 -->
+    <div class="block">
+      <div class="block-title"><span class="n">1</span> Ethical Leadership Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan Hung's entire career is a testament to ethical leadership, characterized by personal sacrifice, unwavering integrity, and a profound commitment to educational justice.
+          <br><br>
+          <strong>a) Sacrificial Commitment to Educational Equity:</strong> The foundational act of Principal Chan's ethical leadership was his decision in 2009 to resign from his position as a well-paid secondary school principal to establish PCFTW. This decision involved abandoning a substantial salary to pursue educational justice for disadvantaged students; personal financial sacrifice (he prepared for this transition by obtaining a Putonghua proficiency certificate and a security guard license to support himself); and family sacrifice (he and his wife carefully calculated their finances before his resignation, with his wife's non-objection representing the greatest support she could give).
+          <br><br>
+          <strong>b) Integrity in Organizational Governance:</strong>
+          <ul class="bullets">
+            <li><strong>Financial Transparency:</strong> The 2025 Annual Report includes detailed financial statements, demonstrating a commitment to transparency and accountability in the use of donated funds.</li>
+            <li><strong>Refusal of Compromising Donations:</strong> 《十年補天》 documents a significant ethical decision when Principal Chan refused a large donation from a wealthy businessman because the attached conditions "would affect the purity of our free tutoring service." He also declined an offer from a group of wealthy young people because they wanted to exclude the first donor, demonstrating his commitment to ethical consistency over financial gain.</li>
+            <li><strong>Clear Service Eligibility:</strong> PCFTW maintains clear, transparent criteria for service eligibility (students receiving Comprehensive Social Security Assistance or full textbook subsidies), ensuring resources reach those most in need.</li>
+          </ul>
+          <strong>c) Ethical Treatment of Students and Families:</strong>
+          <ul class="bullets">
+            <li><strong>Dignity and Respect:</strong> In 《十年補天》, he writes that poverty should not be a source of shame: "Poverty is not a crime." He refuses to publish identifying information about scholarship recipients and emphasizes that receiving government assistance is a right, not something to be ashamed of.</li>
+            <li><strong>Non-Judgmental Approach:</strong> The Education Model document articulates the organization's commitment to never rejecting or giving up on a student, regardless of their past performance or behavior. As Principal Chan writes: "We never refuse, and we never give up!"</li>
+            <li><strong>Holistic Care:</strong> The Student Testimonials report documents how tutors provide emotional support, celebrate small victories, and serve as life mentors, demonstrating an ethical commitment to the whole child, not just academic outcomes.</li>
+          </ul>
+          <strong>d) Professional Integrity and Humility:</strong> Principal Chan consistently deflects personal credit to acknowledge the contributions of others. In 《十年補天》, he states: "Relying on me alone, nothing could be done." He emphasizes that any awards or recognition he receives are "a recognition and affirmation of every stakeholder in our organization." The 2025 Annual Report and Education Model document consistently frame PCFTW's success as a collective achievement of volunteers, donors, staff, and supporters, reflecting his humble and inclusive leadership style.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的整個職業生涯是道德領導力的明證，以個人犧牲、堅定不移的誠信和對教育公義的深切承諾為特徵。
+          <br><br>
+          <strong>a) 對教育公平的犧牲承諾：</strong>陳校長道德領導力的奠基性行動是他2009年決定辭去高薪中學校長職位以創辦PCFTW。這一決定涉及放棄可觀的薪水以追求弱勢學生的教育公義；個人財務犧牲（他通過獲得普通話水平證書和保安牌照來為這一轉變做準備以支持自己）；以及家庭犧牲（他和妻子在辭職前仔細計算了財務，妻子的不反對代表了她能給予的最大支持）。
+          <br><br>
+          <strong>b) 組織治理中的誠信：</strong>
+          <ul class="bullets">
+            <li><strong>財務透明：</strong>2025年報包括詳細的財務報表，展示了對捐款資金使用的透明度和問責制的承諾。</li>
+            <li><strong>拒絕妥協性捐款：</strong>《十年補天》記錄了一個重要的道德決定，當時陳校長拒絕了一位富商的大額捐款，因為附加條件「會影響我們免費補習服務的純粹性」。他還拒絕了一群富二代的提議，因為他們想排除第一位捐款人，展示了他對道德一致性而非財務收益的承諾。</li>
+            <li><strong>清晰的服務資格：</strong>PCFTW維持清晰、透明的服務資格標準（接受綜合社會保障援助或全額書簿津貼的學生），確保資源到達最需要的人手中。</li>
+          </ul>
+          <strong>c) 對學生和家庭的道德對待：</strong>
+          <ul class="bullets">
+            <li><strong>尊嚴和尊重：</strong>在《十年補天》中，他寫道貧窮不應是羞恥的來源：「貧窮不是罪。」他拒絕公布獎學金獲得者的身份資訊，並強調接受政府援助是一項權利，不是羞恥的事。</li>
+            <li><strong>非評判性方法：</strong>教育模式文件闡明了組織永不放棄或拒絕任何學生的承諾，不論他們過去的表現或行為如何。正如陳校長所寫：「我們永不拒絕，也永不放棄！」</li>
+            <li><strong>全人關懷：</strong>學生心聲報告記錄了導師如何提供情感支援、慶祝小勝利並作為人生導師，展示了對整個孩子的道德承諾，而不僅僅是學術成果。</li>
+          </ul>
+          <strong>d) 專業誠信和謙遜：</strong>陳校長一貫地將個人功勞轉移以承認他人的貢獻。在《十年補天》中，他表示：「只靠我一個人，什麼都做不了。」他強調他收到的任何獎項或認可都是「對我們組織每個持份者的認可和肯定」。2025年報和教育模式文件一致將PCFTW的成功框架為義工、捐款者、員工和支持者的集體成就，反映了他謙遜和包容的領導風格。
+        </div>
+      </div>
+    </div>
+
+    <!-- E2 -->
+    <div class="block">
+      <div class="block-title"><span class="n">2</span> Values-Based Education Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan has built an educational model fundamentally grounded in values-based education, promoting ethics, character, and a "life affects life" philosophy that transforms both tutors and students.
+          <br><br>
+          <strong>a) The "Compare Only with Yourself" Philosophy:</strong> PCFTW's signature scholarship programme embodies a profound values-based approach to education:
+          <ul class="bullets">
+            <li><strong>Rewarding Progress Over Ranking:</strong> Unlike conventional scholarships that reward only the highest achievers, PCFTW's scholarship recognizes any student who improves, even by a single point. As documented in the Student Testimonials report and 《十年補天》, this philosophy "values progress over rank, effort over innate ability, and dignity over comparison."</li>
+            <li><strong>Dignity and Self-Worth:</strong> This approach communicates to struggling students that their efforts are valued and that personal growth matters more than relative standing.</li>
+            <li><strong>Challenging Meritocratic Assumptions:</strong> The Education Model document explicitly articulates how PCFTW "rejects meritocratic assumptions that attribute academic success primarily to individual effort and ability," recognizing the structural barriers that disadvantaged students face.</li>
+          </ul>
+          <strong>b) The "Life Affects Life" Philosophy:</strong> The core values framework of PCFTW is the principle that education is about transforming lives, not just transmitting knowledge:
+          <ul class="bullets">
+            <li><strong>Mentorship as Values Education:</strong> Tutors are trained not merely to teach academic content but to serve as role models, mentors, and sources of encouragement. The Student Testimonials report documents that 51.7% of students experienced emotional and confidence transformation through their tutoring relationship.</li>
+            <li><strong>Teaching Compassion and Gratitude:</strong> Students consistently express gratitude for their tutors' kindness and patience, with many explicitly committing to "pay it forward."</li>
+            <li><strong>Building Character Through Service:</strong> The Education Model document describes how tutors learn about students' family situations, personal interests, future aspirations, and daily struggles, enabling them to address not just academic but also character and life challenges.</li>
+          </ul>
+          <strong>c) Cultivating Reciprocity and Social Responsibility:</strong>
+          <ul class="bullets">
+            <li><strong>The "Pay It Forward" Effect:</strong> The Student Testimonials report documents that 18.6% of scholarship recipients explicitly commit to becoming volunteer tutors, creating a self-sustaining cycle of generosity.</li>
+            <li><strong>"It is More Blessed to Give than to Receive":</strong> Students internalize the value of service.</li>
+            <li><strong>Breaking the Cycle of Poverty:</strong> The Student Testimonials report documents how students frame PCFTW's help as a means to escape poverty permanently.</li>
+          </ul>
+          <strong>d) Ethical Education Beyond Academic Tutoring:</strong> PCFTW's programmes extend values-based education beyond academic subjects, including preschool programmes (teaching social skills, sharing, and cooperation), arts and talent development (teaching discipline, perseverance, and self-expression), and LearningX AI Education (teaching students how to use AI ethically and responsibly).
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長建立了一個根本基於價值觀教育的教育模式，促進道德、品格和「生命影響生命」的理念，轉化導師和學生。
+          <br><br>
+          <strong>a) 「只與自己比較」理念：</strong>PCFTW的標誌性獎學金計劃體現了深刻的價值觀教育方法：
+          <ul class="bullets">
+            <li><strong>獎勵進步而非排名：</strong>與只獎勵最高成就者的傳統獎學金不同，PCFTW的獎學金認可任何進步的學生，哪怕只有一分。正如學生心聲報告和《十年補天》所記錄的，這一理念「重視進步多於排名，重視努力多於天賦，重視尊嚴多於比較」。</li>
+            <li><strong>尊嚴和自我價值：</strong>這種方法向掙扎中的學生傳達，他們的努力受到重視，個人成長比相對地位更重要。</li>
+            <li><strong>挑戰精英假設：</strong>教育模式文件明確闡述了PCFTW如何「拒絕將學術成功主要歸因於個人努力和能力的精英假設」，認識到弱勢學生面臨的結構性障礙。</li>
+          </ul>
+          <strong>b) 「生命影響生命」理念：</strong>PCFTW的核心價值框架是教育是關於轉化生命，而不僅僅是傳授知識的原則：
+          <ul class="bullets">
+            <li><strong>導師指導作為價值觀教育：</strong>導師不僅被培訓教授學術內容，還作為榜樣、導師和鼓勵的來源。學生心聲報告記錄了51.7%的學生通過補習關係經歷了情感和自信轉變。</li>
+            <li><strong>教導同情和感恩：</strong>學生一貫表達對導師善良和耐心的感激，許多人明確承諾「傳遞善意」。</li>
+            <li><strong>通過服務建立品格：</strong>教育模式文件描述了導師如何了解學生的家庭情況、個人興趣、未來願望和日常掙扎，使他們能夠不僅應對學術而且應對品格和生活挑戰。</li>
+          </ul>
+          <strong>c) 培養互惠和社會責任：</strong>
+          <ul class="bullets">
+            <li><strong>「傳遞善意」效應：</strong>學生心聲報告記錄了18.6%的獎學金獲得者明確承諾成為義務導師，創造了一個自我延續的慷慨循環。</li>
+            <li><strong>「施比受更為有福」：</strong>學生內化了服務的價值。</li>
+            <li><strong>打破貧窮循環：</strong>學生心聲報告記錄了學生如何將PCFTW的幫助框架為永久擺脫貧窮的手段。</li>
+          </ul>
+          <strong>d) 超越學術補習的道德教育：</strong>PCFTW的計劃將價值觀教育擴展到學術科目之外，包括學前班（教授社交技能、分享和合作）、藝術和才藝發展（教授紀律、毅力和自我表達）以及LearningX人工智能教育（教導學生如何道德和負責任地使用人工智能）。
+        </div>
+      </div>
+    </div>
+
+    <!-- E3 -->
+    <div class="block">
+      <div class="block-title"><span class="n">3</span> Social Contribution Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan's ethical commitment has translated into profound social contribution that extends far beyond individual academic improvement, impacting families, communities, and the broader social fabric of Hong Kong.
+          <br><br>
+          <strong>a) Breaking the Cycle of Intergenerational Poverty:</strong> The Student Testimonials report documents how PCFTW directly addresses intergenerational poverty:
+          <ul class="bullets">
+            <li><strong>Economic Impact:</strong> 47.1% of students explicitly mention financial hardship or an inability to pay for tutoring. PCFTW removes this barrier, providing "their only bridge to a better future."</li>
+            <li><strong>Social Mobility:</strong> Students describe PCFTW as a pathway to "upward social mobility."</li>
+            <li><strong>Family Impact:</strong> Parents express relief and gratitude, with one mother sharing: "This scholarship not only reduces my family's economic burden but also represents recognition and encouragement."</li>
+          </ul>
+          <strong>b) Restoring Fairness and Dignity to Education:</strong> PCFTW's ethical contribution includes restoring a sense of fairness and dignity to education. Students consistently frame PCFTW as restoring fairness: "PCFTW allows grassroots children to have an equal learning opportunity. We may be born poor, but there are kind people who help disadvantaged communities. Because of your help, thousands of children like me have been able to succeed." The Student Testimonials report documents how students move from shame about receiving help to pride in giving back.
+          <br><br>
+          <strong>c) Building Community and Social Capital:</strong> PCFTW has built a powerful community of volunteers, donors, and supporters that strengthens Hong Kong's social fabric. The mobilization of over 20,000 volunteers represents a significant contribution to civil society and community engagement.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的道德承諾已轉化為深遠的社會貢獻，遠超出個人的學術進步，影響家庭、社區和香港更廣泛的社會結構。
+          <br><br>
+          <strong>a) 打破跨代貧窮循環：</strong>學生心聲報告記錄了PCFTW如何直接解決跨代貧窮：
+          <ul class="bullets">
+            <li><strong>經濟影響：</strong>47.1%的學生明確提到經濟困難或無力支付補習費用。PCFTW消除了這一障礙，提供了「他們通往更美好未來的唯一橋樑」。</li>
+            <li><strong>社會流動：</strong>學生將PCFTW描述為「向上社會流動」的途徑。</li>
+            <li><strong>家庭影響：</strong>家長表達寬慰和感激，一位母親分享：「這項獎學金不僅減輕了我家庭的經濟負擔，還代表了認可和鼓勵。」</li>
+          </ul>
+          <strong>b) 恢復教育的公平和尊嚴：</strong>PCFTW的道德貢獻包括恢復教育的公平感和尊嚴。學生一貫將PCFTW框架為恢復公平：「PCFTW讓基層兒童有平等的學習機會。我們可能出生貧窮，但有心人幫助弱勢社群。因為你們的幫助，成千上萬像我這樣的孩子得以成功。」學生心聲報告記錄了學生如何從對接受幫助的羞恥轉變為對回饋的自豪。
+          <br><br>
+          <strong>c) 建立社區和社會資本：</strong>PCFTW建立了一個強大的義工、捐款者和支持者社群，加強了香港的社會結構。超過20,000名義工的動員代表了對公民社會和社區參與的重大貢獻。
+        </div>
+      </div>
+    </div>
+
+    <!-- E4 -->
+    <div class="block">
+      <div class="block-title"><span class="n">4</span> Recognition for Ethical Influence Evidence</div>
+      <div class="block-body">
+        <span class="lang en">English</span>
+        <div class="en-text">
+          Principal Chan's ethical influence has been recognized through numerous awards and honours that specifically acknowledge his values-driven leadership and social contribution.
+          <br><br>
+          <strong>a) Major Awards Recognizing Ethical and Social Contribution:</strong>
+          <ul class="bullets">
+            <li><strong>2024 – "2024 Touching Hong Kong Figure"</strong>, Hong Kong Ta Kung Wen Wei Media Group: Recognizing individuals who have made extraordinary contributions to Hong Kong society through compassion, sacrifice, and service.</li>
+            <li><strong>2024 – "Child Rescue Award 2024"</strong>, Save the Children: Acknowledging his direct work in protecting and uplifting the lives of vulnerable children.</li>
+            <li><strong>2017 – Honorary Fellow</strong>, The Education University of Hong Kong: The highest recognition for outstanding contributions to education.</li>
+            <li><strong>2016 – Outstanding Alumni Award</strong>, Hong Kong Baptist University: Recognizing his exceptional professional achievements and service to the community.</li>
+            <li><strong>2015 – Outstanding Leader Award (Education and Technology)</strong>, Sing Tao Daily News Group: Acknowledging his leadership in educational innovation and ethical commitment to educational equity.</li>
+            <li><strong>2013 – "Eighth Love Award"</strong>, Hong Kong, Macau, Taiwan Charitable Foundation: Recognizing individuals who demonstrate exceptional love and compassion for others.</li>
+          </ul>
+          <strong>b) Organizational Recognition of Ethical Impact:</strong>
+          <ul class="bullets">
+            <li><strong>2025 – "Star Diamond Service Award" (Caring Service Award):</strong> Recognizing the organization's commitment to compassionate service.</li>
+            <li><strong>2024–2025 – "Community Hero Volunteer Award – Outstanding Community Impact Award":</strong> Acknowledging the exceptional community impact of PCFTW's volunteer-driven model.</li>
+            <li><strong>2019 – "Gentleman Enterprise Award – Non-Profit Organisation Award"</strong>, Hong Kong Hang Seng University: Recognizing organizations that demonstrate ethical business practices, integrity, and social contribution.</li>
+            <li><strong>2014 – "Social Capital Builder Award"</strong>, Labour and Welfare Bureau: Recognizing PCFTW's contribution to building social capital and community cohesion through ethical service.</li>
+          </ul>
+          <strong>c) Academic Recognition of Ethical Leadership:</strong> The peer-reviewed article "Disadvantaged Adolescents' Well-Being in Fee-Free One-on-One Supplementary Tutoring" (Yung &amp; Poon, 2025) provides academic validation of Principal Chan's ethical influence. The study documents how PCFTW promotes equity, equality, and reciprocity in education; demonstrates how the organization creates "equal and respectful terms, without any sense of subordination" between tutors and students; and concludes that PCFTW provides "a state of balance or equilibrium" that contributes to the well-being of disadvantaged students.
+          <br><br>
+          <strong>d) Media Recognition and Public Acknowledgment:</strong> The 2025 Annual Report documents extensive media coverage that acknowledges Principal Chan's ethical influence, including features in the Sing Tao Daily, Xinhua Net, Ta Kung Wen Wei, and Wen Wei Po.
+        </div>
+        <span class="lang zh">中文</span>
+        <div class="zh-text">
+          陳校長的道德影響已通過眾多獎項和榮譽獲得認可，這些獎項特別肯定了他以價值觀驅動的領導力和社會貢獻。
+          <br><br>
+          <strong>a) 表彰道德和社會貢獻的主要獎項：</strong>
+          <ul class="bullets">
+            <li><strong>2024年——「2024感動香江人物」</strong>，香港大公文匯傳媒集團：表彰通過同情、犧牲和服務對香港社會做出非凡貢獻的個人。</li>
+            <li><strong>2024年——「救助兒童獎2024」</strong>，救助兒童會：肯定他在保護和提升弱勢兒童生活方面的直接工作。</li>
+            <li><strong>2017年——榮譽院士</strong>，香港教育大學：對教育卓越貢獻的最高認可。</li>
+            <li><strong>2016年——傑出校友獎</strong>，香港浸會大學：表彰他卓越的專業成就和對社區的服務。</li>
+            <li><strong>2015年——傑出領袖獎（教育和科技）</strong>，星島日報集團：肯定他在教育創新方面的領導力和對教育公平的道德承諾。</li>
+            <li><strong>2013年——「第八屆愛心獎」</strong>，港澳台灣慈善基金會：表彰對他人表現出非凡愛心和同情的個人。</li>
+          </ul>
+          <strong>b) 道德影響的組織認可：</strong>
+          <ul class="bullets">
+            <li><strong>2025年——「星鑽服務大獎」（關愛服務大獎）：</strong>認可組織對關愛服務的承諾。</li>
+            <li><strong>2024-2025年——「社區英雄義工獎——卓越社區影響力獎」：</strong>肯定PCFTW義工驅動模式的卓越社區影響。</li>
+            <li><strong>2019年——「君子企業大獎——非牟利組織獎」</strong>，香港恒生大學：表彰展示道德商業實踐、誠信和社會貢獻的組織。</li>
+            <li><strong>2014年——「社會資本動力獎」</strong>，勞工及福利局：認可PCFTW通過道德服務對建立社會資本和社區凝聚力的貢獻。</li>
+          </ul>
+          <strong>c) 道德領導力的學術認可：</strong>同行評審文章《弱勢青少年在免費一對一補充補習中的福祉》（Yung &amp; Poon, 2025）為陳校長的道德影響提供了學術驗證。該研究記錄了PCFTW如何促進教育中的公平、平等和互惠；展示了組織如何在導師和學生之間創造「平等和尊重的關係，沒有任何從屬感」；並得出結論，PCFTW提供了「一種平衡或均衡的狀態」，有助於弱勢學生的福祉。
+          <br><br>
+          <strong>d) 媒體認可和公眾肯定：</strong>2025年報記錄了肯定陳校長道德影響的大量媒體報導，包括《星島日報》、《新華網》、《大公文匯》和《文匯報》的專題報導。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>THE LEGACY EDUCATOR AWARD 2026</strong></p>
+    <p>Global Educator Award (GEA) &bull; Universiti Pendidikan Sultan Idris (UPSI)</p>
+    <p>Principal Chan Hung &mdash; Principal Chan Free Tutorial World (Hong Kong), Founder</p>
+    <p style="margin-top:10px; font-size:0.95em;">Prepared for interview preparation &bull; English + 中文對照</p>
+  </div>
+
+</div>
+</body>
+</html>
